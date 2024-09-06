@@ -18,7 +18,7 @@
         ")"
     );
     var itemLength = selectors.item.length;
-    window.location.hash = '#'+selectors.item.first().find(selectors.img).attr("src");
+
 
     $(window).scroll(function() {
       var max, min;
@@ -39,7 +39,7 @@
               ")"
           );
           selectors.item.last().addClass(selectors.activeClass);
-          window.location.hash = '#'+selectors.item.last().find(selectors.img).attr("src");
+          window.location.hash = '#dan-glagoljice';
           
         } else if (pos <= max - 40 && pos >= min) {
           selectors.id.css(
@@ -61,3 +61,9 @@
 })(jQuery);
 
 $("#timeline-1").timeline();
+
+if (window.location.href.indexOf('#') == 0) {
+  let hash = window.location.href.split('#')[1];
+  let hashTop = document.querySelector(`#${hash}`).offsetTop;
+  window.scrollTop = hashTop;
+}
