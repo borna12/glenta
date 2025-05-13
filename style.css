@@ -353,3 +353,7 @@ body.menu-open .sidebar {
 .timeline-item {
   scroll-margin-top: 20px; /* ili više ako treba veći razmak */
 }
+
+body.menu-open #menuButton {
+  background-color: #2c2c2c;
+}
