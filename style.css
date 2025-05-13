@@ -166,3 +166,185 @@ a{color: white;}
   display: inline-block;
   font-family: Cardo;
 }
+
+
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    color: white;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    margin-top: 10px;
+  }
+
+  .nav-menu li {
+    list-style: none;
+    border-top: 1px solid #555;
+  }
+
+  .nav-menu li a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .nav-menu li a:hover {
+    background-color: #555;
+  }
+
+  .logo {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  @media(min-width: 768px) {
+    .nav-menu {
+      display: flex !important;
+      flex-direction: row;
+      background-color: transparent;
+      margin-top: 0;
+    }
+    .nav-menu li {
+      border: none;
+    }
+    .nav-menu li a {
+      padding: 10px 20px;
+    }
+    .logo {
+      display: none;
+    }
+  }
+
+
+  /* Sidebar izbornik */
+/* Glavni sidebar */
+.sidebar {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  background-color: #222;
+  padding-top: 60px;
+  overflow-y: auto; /* skrolanje izbornika */
+  transition: 0.3s;
+  z-index: 1000;
+  color: white;
+}
+
+/* Glavna lista */
+.sidebar ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Podnaslovi */
+.sidebar ul > li {
+  margin-bottom: 10px;
+}
+
+/* Naslovi razina (boldana) */
+.sidebar ul > li > strong {
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Podlista */
+.sidebar ul ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+/* Pojedinačne stavke */
+.sidebar ul ul li {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Hover efekt */
+.sidebar ul ul li:hover {
+  color: white;
+}
+
+/* Hamburger gumb */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Animacija X */
+body.menu-open .menu-toggle .bar:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+body.menu-open .menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .menu-toggle .bar:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Sidebar se otvara */
+body.menu-open .sidebar {
+  left: 0;
+}
+
+
+/* Skroller unutar sidebar-a (za moderne preglednike) */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* Firefox (sličan stil) */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2c2c2c;
+}

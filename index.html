@@ -1,458 +1,1143 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Povijest glagoljice i glagoljaštva</title>
-  <meta name="description" content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj.">
-  <meta name="author" content="STIN">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-<link rel="icon" type="image/png" href="./favicon.ico">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Povijest glagoljice i glagoljaštva</title>
+      <meta name="description"
+         content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj.">
+      <meta name="author" content="STIN">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+      <link rel="icon" type="image/png" href="./favicon.ico">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <meta property="og:title" content="Povijest glagoljice i glagoljaštva" />
+      <meta property="og:description"
+         content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj." />
+      <meta property="og:image" content="og-slika.jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@stin" />
+      <meta name="twitter:title" content="Povijest glagoljice i glagoljaštva" />
+      <meta name="twitter:description"
+         content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj." />
+      <meta name="twitter:image" content="og-slika.jpg" />
+   </head>
+   <body>
+      <!-- 
+         original code
+         Copyright (c) 2024 Mert Cukuren (https://codepen.io/knyttneve/pen/bgvmma)
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+         
+         -->
+      <!-- ilirico 4 i krčki natipis nađi nove slike -->
 
-<meta property="og:title" content="Povijest glagoljice i glagoljaštva" />
-<meta property="og:description" content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj." />
-<meta property="og:image" content="og-slika.jpg" />
+      <div class="sidebar" id="sidebar">
+         <ul>
+           <li><strong>Počeci glagoljice i slavenske pismenosti (9. stoljeće)</strong>
+             <ul>
+               <li><a href="#ciril-metod">Djelovanje Ćirila i Metoda (863.)</a></li>
+               <li><a href="#smrt-ciril">Ćirilova smrt (869.)</a></li>
+               <li><a href="#smrt-metod">Metodova smrt (885.)</a></li>
+               <li><a href="#ucenici-metod">Metodovi učenici protjerani iz Moravske (886.)</a></li>
+               <li><a href="#ivan-X">Pisama pape Ivana X i zaključci splitskog sabora (925.)</a></li>
+             </ul>
+           </li>
+           <li><strong>Rano hrvatsko glagoljaštvo (10. – 13. stoljeće)</strong>
+             <ul>
+               <li><a href="#kijevski-listic">Kijevski listići (10. st., 11./12. st.)</a></li>
+               <li><a href="#drugi-splitski-sabor">Drugi splitski sabor raspravlja o glagoljaštvu (1060.)</a></li>
+               <li><a href="#plominski">Plominski natpis (11. st.)</a></li>
+               <li><a href="#konavoski">Konavoski natpis (11. st.)</a></li>
+               <li><a href="#zupa-dubrovacka">Natpis Župe Dubrovačke (11. st.)</a></li>
+               <li><a href="#valunska">Valunska ploča (11. st.)</a></li>
+               <li><a href="#krcki">Krčki natpis (11. st.)</a></li>
+               <li><a href="#klovicev">Kločev glagoljaš (11./12. st.)</a></li>
+               <li><a href="#budimpestanski-odlomak">Budimpeštanski odlomci (11./12. st.)</a></li>
+               <li><a href="#bascanka-ploca">Bašćanska ploča (1100.)</a></li>
+               <li><a href="#darovnica-dragoslava">Darovnica slavnoga Dragoslava (oko 1100.)</a></li>
+               <li><a href="#glagoljasko-pjevanja">Prvi spomen glagoljaškog pjevanja u Hrvatskoj (1177.)</a></li>
+               <li><a href="#becki-listic">Bečki listići (11./12. st.)</a></li>
+               <li><a href="#bascanski-ostrisci">Baščanski ostrišci (12. st.)</a></li>
+               <li><a href="#uglata">Uglata glagoljica (12./13. st.)</a></li>
+               <li><a href="#rocki-gla">Ročki glagoljični abecedarij (oko 1200.)</a></li>
+               <li><a href="#splitski-misal">Splitski fragment misala (13. st.)</a></li>
+               <li><a href="#pismo-senjskom-biskupu-filipu">Otpis pape Inocenta IV. senjskom biskupu Filipu (1248.)</a></li>
+               <li><a href="#pismo-krckom-biskupu-fructuozu">Otpis pape Inocenta IV. krčkome biskupu Fructuozu (1252.)</a></li>
+               <li><a href="#vinodolski-zakonik">Vinodolski zakonik (1288.)</a></li>
+             </ul>
+           </li>
+           <li><strong>Zlatno doba glagoljaštva (14. – 16. stoljeće)</strong>
+             <ul>
+               <li><a href="#vrbnicki-brevijar">I. vrbnički brevijar (13./14. st.)</a></li>
+               <li><a href="#illirico-IV">Vatikanski misal Illirico IV (14. st.)</a></li>
+               <li><a href="#lobkovicov">Lobkovicov psaltir (1359.)</a></li>
+               <li><a href="#novak">Misal kneza Novaka (1368.)</a></li>
+               <li><a href="#knjiski-kancelarijski">Knjiški kurziv i kancelarijski kurziv (14. st.)</a></li>
+               <li><a href="#slave-73">Pariški (Borislavičev) zbornik Slave 73 (1375.)</a></li>
+               <li><a href="#sv-kriz">Poljski kralj Vladislav II. Jagelović otvara samostan za glagoljaše u Krakovu (1390.)</a></li>
+               <li><a href="#istarski-razvod">Istarski razvod (1395.)</a></li>
+               <li><a href="#brevijar-omisljanin">Brevijar Vida Omišljanina (1396.)</a></li>
+               <li><a href="#hrvojev-misal">Hrvojev misal (1403./1404.)</a></li>
+               <li><a href="#rocki-misal">Ročki misal (15. st.)</a></li>
+               <li><a href="#ljubljanski-misal">I. ljubljanski (beramski) misal (15. st.)</a></li>
+               <li><a href="#brevijar-mavra">Brevijar popa Mavra (1460.)</a></li>
+               <li><a href="#petrisov-zbornik">Petrisov zbornik (1468.)</a></li>
+               <li><a href="#misal-rimski-dvor">Misal po zakonu rimskoga dvora (1483.)</a></li>
+               <li><a href="#prvotisak">Prvotisak brevijara (1491.)</a></li>
+               <li><a href="#senjska-tiskara">Senjska tiskara (1494.)</a></li>
+               <li><a href="#drugi-novaljski-brevijar">Drugi Novljanski brevijar (1495.)</a></li>
+               <li><a href="#zgombicev-zbornik">Žgombičev zbornik (16. st)</a></li>
+               <li><a href="#prva-hrvatskoglagoljska-pocetnica">Prva hrvatskoglagoljska početnica (1527.)</a></li>
+               <li><a href="#misal-modrusanina">Misal Pavla Modrušanina (1529.)</a></li>
+               <li><a href="#misal-hruacki">Misal hruacki (1531.)</a></li>
+               <li><a href="#brozicev-brevijar">Brozićev brevijar (1561.)</a></li>
+             </ul>
+           </li>
+           <li><strong>Sumrak glagoljaštva (17. – 19. stoljeće)</strong>
+             <ul>
+               <li><a href="#Propagande-Fide">Glagoljica u doba tiskare Propagande Fide (16. st.)</a></li>
+               <li><a href="#Levakovićeva-misal">Levakovićev misal (1631.)</a></li>
+               <li><a href="#Levakovićev-brevijara">Levakovićev brevijar (1648.)</a></li>
+               <li><a href="#Pastricev-brevijar">Paštrićev brevijar (1688.)</a></li>
+               <li><a href="#Pastricev-misal">Paštrićev misal (1706.)</a></li>
+               <li><a href="#Karamanov-misal">Karamanov misal (1741.)</a></li>
+               <li><a href="#Karamanov-brevijar">Karamanov brevijar (1791.)</a></li>
+               <li><a href="#grande-munus">Grande munus (1880.)</a></li>
+               <li><a href="#parcicev-misal">Parčićev misal (1893.)</a></li>
+               <li><a href="#Cyrillomethodiana">Ćirilometodijana kao znanstvena disciplina (19. st.)</a></li>
+               <li><a href="#opadanje-glagoljice">Opadanje korištenja glagoljice (19. i 20. st.)</a></li>
+             </ul>
+           </li>
+           <li><strong>Glagoljaštvo u moderno doba (20. stoljeće – danas)</strong>
+             <ul>
+               <li><a href="#staroslavenska-akademija">Staroslavenska akademija (1902.)</a></li>
+               <li><a href="#trece-izdanje-parcicevog-misala-1905">Treće izdanje Parčićevog misala 1905. (1905.)</a></li>
+               <li><a href="#Tipografia-Poliglotta-Propagande">Tipografia Poliglotta Propagande (1909.)</a></li>
+               <li><a href="#vajsov-misal">Vajsov misal (1927.)</a></li>
+               <li><a href="#staroslavenska-institut">Staroslavenski institut (1952.)</a></li>
+               <li><a href="#egregiae-virtutis">Egregiae Virtutis (1980.)</a></li>
+               <li><a href="#aleja-glagoljasa">Aleja glagoljaša (1977. do 1985.)</a></li>
+               <li><a href="#glagoljski-natpisi">Glagoljski natpisi (1982.)</a></li>
+               <li><a href="#drustvo-prijatelja-glagoljice">Društvo prijatelja glagoljice (1993.)</a></li>
+               <li><a href="#glagoljasko-pjevanje-zasticena-kultura">Glagoljaško pjevanje dobiva status kao zaštićeno kulturno dobro (2008.)</a></li>
+               <li><a href="#umjece-glagoljice-zasticena-kultura">Umijeće čitanja, pisanja i tiskanja glagoljice dobiva status kao zaštićeno kulturno dobro (2014.)</a></li>
+               <li><a href="#zci">Znanstveni centar izvrsnosti za hrvatsko glagoljaštvo (2014.)</a></li>
+               <li><a href="#gramatika">Prva gramatika hrvatskoga crkvenoslavenskog jezika (2014.)</a></li>
+               <li><a href="#dan-glagoljice">Dan hrvatske glagoljice i glagoljaštva (2019.)</a></li>
+               <li><a href="#centar-gla">Osnivanje Centra za istraživanje glagoljaštva (2020.)</a></li>
+               <li><a href="#euro">Motiv glagoljice na hrvatskim euro kovanicama (2023.)</a></li>
+             </ul>
+           </li>
+         </ul>
+       </div>
+       
+       
+       <button class="menu-toggle" onclick="toggleSidebar()" id="menuButton">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+       </button>      <div class="timeline-container" id="timeline-1">
+      <div class="timeline-header">
+         <h2 class="timeline-header__title">Povijest glagoljaštva</h2>
+         <h3 class="timeline-header__subtitle">lenta vremena</h3>
+      </div>
+      <div class="timeline">
+         <div class="timeline-item" data-text="Djelovanje Ćirila i Metoda" id="ciril-metod">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/ciril-metod.jpeg" />
+               <h2 class="timeline__content-title">863.</h2>
+               <p class="timeline__content-desc">Autorom glagoljice smatra se sv. Konstantin Ćiril, Grk iz Soluna (826. ili
+                  827. – 869.). Brojni su Solunjani dobro znali slavenski jezik zato što je u okolici njihova grada bila
+                  naseljena nemala slavenska zajednica. Zbog svoje učenosti, mudrosti i zbog toga što je bio profesor
+                  filozofije, Ćiril dobiva nadimak Filozof. Za potrebe misije među moravskim Slavenima (središnja Europa),
+                  koju je 862. godine pokrenuo knez Rastislav, Ćiril je osmislio novo alfabetsko fonološko pismo glagoljicu s
+                  najviše 38 znakova koristeći se elementima starijega sustavnog pisma i oblikovao književni jezik
+                  starocrkvenoslavenski na temelju govora bugarsko-makedonskoga narječja 863. <br>Ćirilov je najbliži suradnik
+                  bio njegov stariji brat Metod (oko 815. – 885.). Oni se jednim imenom nazivaju Svetom braćom ili Slavenskim
+                  apostolima i prosvjetiteljima. Njihovim su djelovanjem postavljeni temelji slavenske pisane kulture i
+                  uljudbe. 
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Ćirilova smrt" id="smrt-ciril">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/smrt-cirila.jpg" />
+               <h2 class="timeline__content-title">869.</h2>
+               <p class="timeline__content-desc">14. veljače 869 umire Ćiril. Nakon Ćirilove smrti Metoda požrtvovno djeluje
+                  sljedećih šesnaest godina kako bi učinci misije trajno zaživjeli među slavenskim narodima.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Metodova smrt" id="smrt-metod">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/smrt-metoda.jpg" />
+               <h2 class="timeline__content-title">885.</h2>
+               <p class="timeline__content-desc">6. travnja umire Metod. Važno je spomenuti da nije sačuvan nijedan spomenik
+                  iz vremena nastanka staroslavenskoga jezika, tj. iz druge polovice 9. stoljeća, jer su svi uništeni poslije
+                  Metodove smrti. Najstariji sačuvani spomenici prijepisi su iz 10. i 11. stoljeća. 
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Metodovi učenici protjerani iz Moravske" id="ucenici-metod">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/metodovi-ucenici.jpg" />
+               <h2 class="timeline__content-title">886.</h2>
+               <p class="timeline__content-desc">Smrt Metoda bio je znak latinskomu kleru i protivnicima slavenske misije
+                  među Slavenima i protivnicima slavenskoga bogoslužja da obnove pritisak na slavenske misionare. Novoizabrani
+                  papa Stjepan V. pismom knezu Svatopluku zabranio je slavensko bogoslužje. Metodovi su učenici nakon toga
+                  početkom 886. zlostavljani, neki su i zarobljeni te protjerani. Večina njih je iz Moravske prešla u
+                  Bugarsku, a zarobljenici su bili prodavani u Veneciji te prešli na bizantski prostor, u Istru, na Kvarnerske
+                  otoke i u Dalmaciju. Time se u nepovoljnim okolnostima baština Svete braće proširila na prostoru Bugarske i
+                  Makedonije, kasnije među Hrvatima, Slovacima i Česima, a poslije i među druge slavenske narode.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Pisama pape Ivana X i zaključci splitskog sabora" id="ivan-X">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/pismo.gif" />
+               <h2 class="timeline__content-title">925. </h2>
+               <p class="timeline__content-desc">Prve pouzdane vijesti o uporabi prvoga slavenskog književnog jezika i pisma
+                  glagoljice kod Hrvata potječu iz 10. stoljeća, točnije iz godine 925., iz dvaju pisama pape Ivana X. U
+                  jednom pismu papa opominje dalmatinske biskupe zbog služenja bogoslužja na slavenskom jeziku, a u drugom
+                  prigovara prvome hrvatskome kralju Tomislavu i zahumskomu knezu Mihajlu Viševiću što to dopuštaju. Zaključci
+                  splitskih crkvenih sabora u ranom srednjem vijeku također svjedoče o postojanju slavenskoga bogoslužja.
+                  <br>Ova pisma time su prva potvrda glagoljaštva u Hrvatskoj.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Kijevski listići" id="kijevski-listic">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/kijevski.png" />
+               <h2 class="timeline__content-title">10. st., 11./12. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Kijevski listići</em></strong>, jedan od najstarijih očuvanih
+                  glagoljičnih zapisa te najstariji starocrkvenoslavenski liturgijski spomenik. Listići fragment su
+                  sakramentara sa sedam listova, nastalih najranije krajem 9. ili tijekom 10. st. na crkvenoslavenskome
+                  jeziku. Čuvaju se u <a href="https://maps.app.goo.gl/ZJUwmDC2GawHkkKr9" target="_blank">Nacionalnoj
+                  knjižnici Ukrajine „V. I. Vernadski”</a> u Kijevu. Prva stranica, dodana vjerojatno u 12. st., napisana je
+                  na hrvatskome, a ostatak na srednjoeuropskome prostoru te sadržava najstariju poznatu molitvu Blaženoj
+                  Djevici Mariji na tome jeziku.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Drugi splitski sabor raspravlja o glagoljaštvu" id="drugi-splitski-sabor">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Historia_Salonitana.jpg" />
+               <h2 class="timeline__content-title">1060. </h2>
+               <p class="timeline__content-desc">Splitski crkveni sabor iz 1060. godine nije ukinuo slavensku službu Božju
+                  niti uporabu glagoljice, ali je naredio da svećenici moraju znati i latinski jezik u govoru i pismu. O tome
+                  saboru doznajemo u dijelu Toma Arhiđakon <em>Historia Salonitana</em> sastavljena u 13. st.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Plominski natpis" id="plominski">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Plominski_natpis.png" />
+               <h2 class="timeline__content-title">11. st.</h2>
+               <p class="timeline__content-desc">
+                  <strong><em>Plominski natpis</em></strong> kameni je reljef iz 11. stoljeća na crkvi sv. Jurja Staroga u
+                  Plominu u Istri. <em>Plominski natpis</em> ubraja se u najstarije spomenike hrvatskoga jezika. Povjesničari
+                  umjetnosti nisu sigurni je li na njemu prikazan lik sv. Jurja ili ilirski bog Silvan. Natpis, koji je mlađi
+                  od zagonetnoga prikaza kršćanskoga svetca ili starobožačkoga lika, glasi <em>se e pisъlъ s… </em>('ovo je
+                  pisao s...'). Taj se najstariji spomenik istarskoga glagoljaštva do danas sačuvao zahvaljujući tomu što je
+                  bio prekriven osinjacima. Zbog njih je ostao pošteđen od talijanaškoga uništavanja hrvatske materijalne
+                  kulturne baštine u prvoj polovici 20. stoljeća.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Konavoski natpis" id="konavoski">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/konavoski_natpis.png" />
+               <h2 class="timeline__content-title">11. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Konavoski natpis</em></strong> i <em>Natpis iz Župe
+                  Dubrovačke</em> spadaju među najstarije hrvatskoglagoljične natpise i ujedno su najjužniji
+                  hrvatskoglagoljični natpisi. Urezan je na ulomku mramora antičkoga koja je vjerojatno bila rimska nadgrobna
+                  stel. Pronađen je 1990. uz groblje crkve Male Gospe podno tvrđave Soko u Konavlima.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Natpis Župe Dubrovačke" id="zupa-dubrovacka">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/zupa-dubrovacka.jpg" />
+               <h2 class="timeline__content-title">11. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Glagoljski natpis iz Župe Dubrovačke</em></strong> nalazi se na
+                  ulomku krovnoga crijepa antičkoga podrijetla koji je pronađen 2007. prilikom arheološkog istraživanja
+                  groblja kraj <a href="https://maps.app.goo.gl/CAG4BiM7gmn4o2jRA" target="_blank">Crkve sv. Đurđa</a> između
+                  Petrače i Buića u Župi Dubrovačkoj. Otkriveni se dio srednjovjekovnoga groblja datira između 10. i 12.
+                  stoljeća. Nakon čišćenja kamenca s crijepa otkrivena su 102 glagoljska slova (19 grafema, 25 riječi, 8 ili 9
+                  redaka) koji se datiraju 11. stoljećem. Kao epigrafski spomenik najranijega glagoljskoga razdoblja, natpis
+                  iz Župe Dubrovačke po dužini je teksta odmah iza Baščanske ploče. 
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Valunska ploča" id="valunska">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Valun_tablet.png">
+               <h2 class="timeline__content-title">11. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Valunska ploča</em></strong> kamena je nadgrobna ploča iz 11.
+                  stoljeća iz Valuna na otoku Cresu s dvojezičnim natpisom &ndash; na hrvatskome oblom glagoljicom te na
+                  latinskome latinicom. Riječ je o grobnome natpisu triju nara&scaron;taja &ndash; bake T&ecirc;he, sina
+                  Bratohne i unuka June. Hrvatskoglagoljični tekst glasi: <em>těha sinъ vъ(nu)kъ juna, </em>a latinski
+                  <em>Techa et filius eius Bratohna et Iunna nepus eius</em>.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Krčki natpis" id="krcki">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/krcki-natpis.jpg">
+               <h2 class="timeline__content-title">11. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Krčki natpis</em></strong> (11. st.) povezuje se sa Samostanom
+                  sv. Lovre na ulazu u Krk. Pisan je hrvatskim jezikom, oblom glagoljicom, no s pokušajem koordiniranja slova,
+                  u smjeru razvoja ustavne glagoljice.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Kločev glagoljaš" id="klovicev">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/klovicev.png" />
+               <h2 class="timeline__content-title">11./12. st.</h2>
+               <p class="timeline__content-desc"> <strong><em>Kločev glagoljaš</em></strong> (<em>Glagolita Clozianus</em>)
+                  ili <em>Frankapanski kodeks</em> veličine 27 × 20,5 cm, jedini je sačuvani rukopis tzv. staroslavenskoga
+                  kanona s hrvatskoga prostora. Bio je u posjedu Ivana VII. Frankapana († 1486.), posljednjega krčkog
+                  gospodara iz te velikaške kuće, koja je kodeks čuvala kao relikviju vjerujući da ga je napisao sveti
+                  Jeronim. Sačuvani dio sadržava homilijar. Danas se 12 listova čuva u Trentu, a jedan u Innsbrucku. Prvotna
+                  saznanja, izvornik i analize toga zbornika objavio je Jernej Kopitar 1836. godine.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Budimpeštanski odlomci" id="budimpestanski-odlomak">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/budapest.png" />
+               <h2 class="timeline__content-title">11./12. st.</h2>
+               <p class="timeline__content-desc"> <strong><em>Budimpeštanski odlomci</em></strong>, jedini
+                  hrvatskoglagoljični tekst koji još uvijek ima razliku između poluglasova jora i jera. Sačuvana su samo dva
+                  odlomka koja sadržavaju dio legende o Makariju. Čuvaju se u <a
+                     href="https://maps.app.goo.gl/j9n3HGhp8r1wnt8w9" target="_blank">Nacionalnoj knjižnici Széchényi</a> u
+                  Budimpešti.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Bašćanska ploča" id="bascanka-ploca">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Bascanska_ploca.png" />
+               <h2 class="timeline__content-title">1100.</h2>
+               <p class="timeline__content-desc"><strong><em>Bašćanska ploča</em></strong> je najpoznatiji i najopširniji
+                  hrvatskoglagoljični spomenik. Nastala je na otoku Krku, kolijevci glagoljaštva, oko 1100. godine. Nalazila
+                  se u crkvici sv. Lucije u Jurandvoru kraj Baške. Pisana je prijelaznim tipom glagoljice s oble na uglatu.
+                  Služila je kao lijevi plutej u crkvenoj pregradi. Natpis ima 13 redova, počinje invokacijom, a zatim slijedi
+                  zapis popa Držihe o tome da je kralj Zvonimir darovao ledinu crkvi sv. Lucije. Navode se i svjedoci toga
+                  darivanja. Nakon toga opat Dobrovit svjedoči kako je s devetoro braće zidao crkvu u vrijeme kneza Kosmata.
+                  Na ploči se prvi put na hrvatskome jeziku spominje ime kralja Zvonimira i hrvatskoga naroda. Danas se
+                  Bašćanska ploča čuva u atriju <a href="https://maps.app.goo.gl/vTBYXuPuAysC91eYA" target="_blank">Hrvatske
+                  akademije znanosti i umjetnosti</a> u Zagrebu.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Darovnica slavnoga Dragoslava" id="darovnica-dragoslava">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/darovnica-dragoslava.jpg" />
+               <h2 class="timeline__content-title">oko 1100.</h2>
+               <p class="timeline__content-desc"><em><strong>Darovnica slavnoga Dragoslava</strong></em> najstarija je
+                  poznata glagoljična isprava, napisana 1. siječnja 1100. godine u Dobrinju na otoku Krku, na hrvatskome
+                  jeziku. Izvorni je tekst izgubljen, a sačuvan je jedino prijevod s latinskoga na hrvatski (na slici),
+                  notarski akt Petra Periša iz 1724. godine. Najbolje čitanje darovnice dao je Milan Mihaljević 2000. godine,
+                  znatno različit u odnosu na ranija čitanja (<a href="https://hrcak.srce.hr/7256" target="_blank">vidi
+                  rad</a>).
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Prvi spomen glagoljaškog pjevanja u Hrvatskoj" id="glagoljasko-pjevanja">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/zadar.jpg" />
+               <h2 class="timeline__content-title">1177.</h2>
+               <p class="timeline__content-desc"> Godine 1177. papa Aleksandar III. posjetio je Zadar. Kardinal Beson iz
+                  Papine pratanje zabilježio je da su Zadrani Papu dočekali pjevanjem kantika i lauda na hrvatskom jeziku:
+                  "cum immensis laudibus et canticis altissime resonantibus in eorum sclavica lingua". Ovo je prvi poznati
+                  pisani spomen glagoljaškoga pjevanja u Hrvatskoj. Događaj potvrđuje da je glagoljaška liturgijska praksa
+                  bila čvrsto ukorijenjena u Dalmaciji već u 12. stoljeću.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Bečki listići" id="becki-listic">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/becki-listic.jpg" />
+               <h2 class="timeline__content-title">11./12. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Bečki listići</em></strong> je najstariji spomenik hrvatske
+                  liturgijske književnosti na hrvatskme crkvenoslavenskom jeziku i najstariji svjedok češko-hrvatskih
+                  kulturnih veza. Dva pergamentna lista ispisana formativnom glagoljicom potječu s kraja 11. se ili početka
+                  12. stoljeća. 
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Baščanski ostrišci" id="bascanski-ostrisci">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/bascanski-ostrisci.jpg" />
+               <h2 class="timeline__content-title">12. st.</h2>
+               <p class="timeline__content-desc"><em><strong>Baščanski ostrišci</strong></em> glagoljični su fragmenti
+                  pronađeni u Baškoj na otoku Krku. Spadaju među najstarije sačuvane glagoljične tekstove iz početne faze
+                  hrvatskoga crkvenoslavenskog jezika, a sadržavaju odlomak <em>Muke po Mateju</em>. Vinko Premuda pronašao ih
+                  je u Baškoj i čuvao u svojoj kući. Nakon njegove smrti ostavština je prebačena u Hrvatsku akademiju znanosti
+                  i umjetnosti, no ostrišci su nestali. Godine 1997. pronađeni su u <a
+                     href="https://maps.app.goo.gl/qXUMo5NveZrpgCgu6" target="_blank">Hrvatskome državnom arhivu</a>,
+                  pomiješani s ostavštinom Branimira Gušića.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Uglata glagoljica" id="uglata">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/uglata.jpg" />
+               <h2 class="timeline__content-title">12./13. st.</h2>
+               <p class="timeline__content-desc">Razvija se uglata stilizacija glagoljice, koja se razlikuje od prvobitne
+                  okrugle (oble) glagoljice, karakteristične po kružiću kao jednome od elemenata. Ta uglata inačica, koja je
+                  svojstvena isključivo hrvatskomu području, naziva se hrvatskom glagoljicom. Najprepoznatljivija je u svojemu
+                  ustavnom obliku, koji je najzastupljeniji u liturgijskim knjigama poput misala i brevijara.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Ročki glagoljični abecedarij" id="rocki-gla">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/rocki-gla-abecedarij.jpg" />
+               <h2 class="timeline__content-title">oko 1200.</h2>
+               <p class="timeline__content-desc"><strong><em>Ročki glagoljični abecedarij</em></strong> uparan u posvetnome
+                  križu crkve sv. Antona opata u Roču u Istri. Azbučni je niz od 34 znaka iz prijelaznoga razdoblja kad se
+                  počela oblikovati hrvatska uglata glagoljica. Sam natpis ispod žbuke otkrio je Branko Fučić 1949. godine.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Splitski fragment misala" id="splitski-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/splitski.png" />
+               <h2 class="timeline__content-title">13. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Splitski fragment Misala</em></strong> je list pergamenta iz
+                  početka 13. stoljeća napisan glagoljicom na crkvenoslavenskome jeziku s elementima ikavske štokavštine.
+                  Pronašao ga je Vjekoslav Štefanić 1957. godine. Fragment sadržava misne obrasce za prosinac, a koristio se u
+                  uvezu kartulara samostana sv. Anastazije u Splitu. Po brojnim ikavskoštokavskim obilježjima zaključeno je da
+                  je napisan u jugozapadnoj Bosni u posljednjoj fazi razvoja glagoljaštva na tome području.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Otpis pape Inocenta IV. senjskom biskupu Filipu"
+            id="pismo-senjskom-biskupu-filipu">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/pismo_inocent.jpg" />
+               <h2 class="timeline__content-title">1248.</h2>
+               <p class="timeline__content-desc"><strong>Otpis pape Inocenta IV.</strong> iz 1248. senjskomu biskupu Filipu
+                  sadržava papino dopuštenje da spomenuti biskup vrši bogoslužje na crkvenoslavenskome jeziku iz knjiga
+                  pisanih glagoljicom. Njegova je važnost u tome da po prvi put jedan katolički biskup dobiva dopuštenje da
+                  služi misu na nelatinskome jeziku. Pismo je stoga jasan i izravan dokaz prihvaćanja glagoljice i slavenskoga
+                  bogoslužja u hrvatskim krajevima. Na taj je način postavljen temelj za ulazno razdoblje hrvatske glagoljične
+                  kulture u 14. i 15. st. Pismo se danas čuva u Tajnome vatikanskom arhivu.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Otpis pape Inocenta IV. krčkome biskupu Fructuozu"
+            id="pismo-krckom-biskupu-fructuozu">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Inocenc_IV.jpg" />
+               <h2 class="timeline__content-title">1252.</h2>
+               <p class="timeline__content-desc">Odobrava se korištenje staroslavenskoga jezikom i glagoljice u bogoslužju
+                  bendeiktincima u Samostanu sv. Nikole u Omišlju.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Vinodolski zakonik" id="vinodolski-zakonik">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/vinodolski-zakonik.jpg" />
+               <h2 class="timeline__content-title">1288.</h2>
+               <p class="timeline__content-desc"><strong><em>Vinodolski zakonik</em></strong>, najstariji cjelovito sačuvan
+                  dokument običajnoga prava, vjerojatno stariji od svih sličnih dokumenata na slavenskim jezicima osim
+                  <em>Ruske pravde</em>. Pisan glagoljicom na hrvatskome jeziku, u tome se pravnom tekstu od 77 članaka
+                  uređuju odnosi između slobodne općine Vinodol (Novi, Ledenice, Bribir, Grižane, Drivenik, Hreljin, Bakar,
+                  Trsat, Grobnik) i knezova Krčkih. Zapis je na 14 pergamentnih listova veličine 24,3 × 16,5 cm. Zakonik se
+                  čuva u Nacionalnoj i sveučilišnoj knjižnici u Zagrebu.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="I. Vrbnički brevijar" id="vrbnicki-brevijar">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/brevijar.png" />
+               <h2 class="timeline__content-title">13./14. st.</h2>
+               <p class="timeline__content-desc"><strong><em>I. vrbnički brevijar</em></strong> je najstariji očuvani
+                  hrvatskoglagoljski brevijar sastoji se od 259 pergamentnih listova. Stariji dio, 1–160 i 191–240, pisan je
+                  na prijelazu iz 13. u 14. st. Druga dva dijela, 161–190 i 241–259 lista, pisala su najvjerojatnije druga dva
+                  pisara oko sto godina kasnije. Brevijar je posebno važan za proučavannje biblijskih tekstova. Kodeks je
+                  vjerojatno pisan u Vrbniku, o čemu svjedoče naknadni zapisi s početka 15. st., kao i lokalna obilježja kao
+                  što su zamjenica <em>če</em>, refleks poluglasa kao <em>e</em>, čuvanje prefiksa <em>vi</em> itd.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Vatikanski misal Illirico IV" id="illirico-IV">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/ilirico4.png" />
+               <h2 class="timeline__content-title">14. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Vatikanski misal Illirico IV</em></strong> smatra se najstarijim
+                  hrvatskoglagoljskim misalom (koji nije datiran), a njegov kanon najstariji sačuvanim tekstom slavenskoga
+                  prijevoda kanona uopće. Njegovi tekstovi evanđelja čuvaju značajke izvornoga, ćirilometodskoga prijevoda.
+                  Velika se starina očituje osobito u leksikonu. U novije vrijeme postoje i drukčija mišljenja o vremenu
+                  postanka toga misala koja njegovo pisanje smještaju u durugu polovicu 14. st. Pisan je najvjerojatnije u
+                  Omišlju na otoku Krku.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Lobkovicov psaltir" id="lobkovicov">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/psaltir.png" />
+               <h2 class="timeline__content-title">1359.</h2>
+               <p class="timeline__content-desc"><strong><em>Lobkovicov psaltir</em></strong> iz 1359. najstarija je
+                  izrijekom datirana hrvatska glagoljična knjiga. Danas se čuva u Pragu. Napisao ju je senjski žakan Kirin.
+                  Sastoji se od 160 listova. Nazvana je po posljednim vlasnicima iz obitelji Lobkovic i po tome što je njegov
+                  najvažniji dio psaltir. U kolofonu na kraju rukopisa očuvala se bilješka o pisaru, žaknu (đakonu) Kirinu i
+                  godinu pisanja 1359. vjerojatno u crkvi sv. Kuzme i Damjna u Senju. Rukopis je malo upotrebljivan i dobro
+                  očuvan. Psaltir je potpun, ujedno i najstariji hrvatskoglagoljski tekst psaltira.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Misal kneza Novaka" id="novak">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/misal_novak.png" />
+               <h2 class="timeline__content-title">1368.</h2>
+               <p class="timeline__content-desc"> <strong><em>Misal kneza Novaka</em></strong> (1368.) rukopisna je
+                  glagoljska knjiga koju je ispisao knez Novak Disislavić iz ličke Ostrovice, dvorski vitez hrvatsko-ugarskoga
+                  kralja Ludovika I. Anžuvinca. Novakov se misal smatra najstarijim datiranim glagoljičnim misalom
+                  (<em>Vatikanski misal Illirico IV</em> je stariji, ali nema dataciju) te drugom najljepšom
+                  hrvatskoglagoljskom knjigom nakon <em>Misala Hrvoja Vukčića Hrvatinića </em>
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Knjiški kurziv i kancelarijski kurziv" id="knjiski-kancelarijski">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/petrisov.jpg" />
+               <h2 class="timeline__content-title">14. st.</h2>
+               <p class="timeline__content-desc">U drugoj polovici 14. st. razvijaju se poluustav i kurziv koji se dijeli na
+                  dva tipa – knjiški kurziv i kancelarijski kurziv. Knjiškim kurzivom do sredine 16. st. obično su pisani
+                  kodeksi poučnoga ili književnoga sadržaja, dok su kancelarijskim kurzivom pisani kancelarijski i notarski
+                  akti te razni registri. Tipični su primjeri lijepoga i čitljivoga knjiškog kurziva <em>Petrisov zbornik</em>
+                  (na slici) i <em>Žgombićev zbornik</em>, dok je primjer kancelarijskoga kurziva prisutan u tisućama
+                  notarskih akata, nastajalih od 15. do 19. st. u javnih bilježnika hrvatskoga jezika i glagoljičnoga pisma u
+                  Istri te na otocima Cresu, Lošinju i Krku.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Pariški (Borislavičev) zbornik Slave 73" id="slave-73">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Slave_73.jpg" />
+               <h2 class="timeline__content-title">1375.</h2>
+               <p class="timeline__content-desc"> <strong><em>Pariškom zborniku Slave 73</em></strong> je najstariji
+                  hrvatskoglagoljski zbornik. U zborniku rukopisu koji se umnogome razlikuje od drugih hrvatskoglagoljskih
+                  izvora, jer između ostalog sadrži rijedak primjer glagoljaškog liber horarum i predstavnik je onih
+                  liturgijskih tekstova koji su općenito nestali iz uporabe nakon franjevačke reforme. Intenzivnijim
+                  istraživanjem ovoga zbornika i utvrđivanjem izvora i predložaka na temelju kojih je kodeks sastavljen,
+                  zasigurno će se proširiti spoznaje o tragovima benediktinske glagoljske baštine u hrvatskoj kulturi.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item"
+            data-text="Poljski kralj Vladislav II. Jagelović otvara samostan za glagoljaše u Krakovu" id="sv-kriz">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/jagelovic.jpg" />
+               <h2 class="timeline__content-title">1390.</h2>
+               <p class="timeline__content-desc">Poljski kralj Vladislav II. Jagelović zove glagoljaše iz samostana Emaus
+                  kraj Praga u okolicu Krakova gdje im je podigao samostan sv. Križa u kojemu se glagoljica održala sve do
+                  potkraj 15. st.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Istarski razvod" id="istarski-razvod">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/istarski.png" />
+               <h2 class="timeline__content-title">1395.</h2>
+               <p class="timeline__content-desc"><strong><em>Istarski razvod</em></strong>, hrvatskoglagoljični pravni
+                  spomenik, nastao oko 1395. kojim se uređuju granice te reguliraju posjedi i odnosi između istarskih općina
+                  te njihovih feudalnih gospodara Habsburgovaca, akvilejskoga patrijarha i Mlečana. Pisan je glagoljicom na
+                  hrvatskome jeziku na temelju priloženih dokumenata od 1275. do 1395. godine. Sačuvan je u više potvrda kao
+                  notarski akt iz 16. st. Spomenik svjedoči o visokome pravnom standardu u graničnome području duž cijele
+                  Istre potvrđujući ravnopravan položaj hrvatskoga jezika s latinskim i njemačkim u javnome bilježništvu na
+                  europskoj razini.<br />Izvornik (original) nije sačuvan. Na hrvatskome jeziku spomenik je sačuvan samo u dva
+                  glagoljska prijepisa:
+               <ol class="timeline__content-desc">
+                  <li>prijepis Levca Križanića iz 1546. (koji je nastao s prijepisa Jakova Križanića, 1502., na slici)</li>
+                  <li>Momjanski prijepis iz 16. st.</li>
+               </ol>
+               <br>
+               <span class="timeline__content-desc">Taj istaknuti dokument istarske i hrvatske društvene povijesti na
+               latinici prvi je objavio otac domovine Ante Starčević 1852. godine.</span>
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Brevijar Vida Omišljanina" id="brevijar-omisljanin">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/brevija-omisljanin.png" />
+               <h2 class="timeline__content-title">1396.</h2>
+               <p class="timeline__content-desc"><strong><em>Brevijar Vida Omišljanina</em></strong> ispisao je pisar Vid iz
+                  Omišlja po narudžbi crkava sv. Bartolomeja i sv. Antona u Roču (Istra). Danas se ta rukopisna knjiga nalazi
+                  u Austrijskoj nacionalnoj knjižnici u Beču pod signaturom <em>Cod. slav. 3</em>. Izvorno je riječ o u kožu
+                  uvezanu kodeks koji sadržava 468 listova pergamene. Prema računici Branka Fučića za izradu je te pergamene
+                  bilo potrebno stado od 117 ovaca. Knjiga teži oko 8,5 kilograma te je najveća i najteža knjiga iz zlatnoga
+                  razdoblja hrvatskoga glagoljaštva (14. i 15. stoljeće).
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Hrvojev misal" id="hrvojev-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Hrvojev_misal.jpg" />
+               <h2 class="timeline__content-title">1403./1404.</h2>
+               <p class="timeline__content-desc"><strong><em>Hrvojev misal</em></strong> nastao početkom 15. st. (oko 1404.)
+                  je na glasu kao najljepša i najluksuznije ukrašena hrvatskoglagoljična knjiga. Po ljepoti je odmah do nje
+                  Misal kneza Novaka, poznat po tomu što sadržava najviše zlatnih ukrasa i činjenici da je (vjerojatno) glavni
+                  predložak za izradu prve hrvatske tiskane knjige – Misala po zakonu rimskoga dvora iz 1483. godine.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Ročki misal" id="rocki-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/rocki.jpg" />
+               <h2 class="timeline__content-title">15. st.</h2>
+               <p class="timeline__content-desc"><strong><em>Ročki misal</em></strong> je glagoljski misal pisan uglatom
+                  glagoljicom. Sadrži 232 lista pergamenta koji sadrže bogato iluminirane slike i inicijale. Autorstvo misala
+                  potpisuje Bartol Krbavac koji je značajan glagoljski pisac i vrstan iluminator. Izuzima se 13 listova koji
+                  su djelo drugoga pisca, ali iz istoga skriptorija. Ročki misal dobio je ime po Roču gdje je bio u uporabi do
+                  1593. Značajan je filološki, kulturološki, povijesni i umjetnički spomenik hrvatskoga glagoljaštva.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="I. ljubljanski (beramski) misal" id="ljubljanski-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/beram.png" />
+               <h2 class="timeline__content-title">15. st.</h2>
+               <p class="timeline__content-desc"><strong><em>I. ljubljanski (beramski) misal</em></strong> kodeks je od 245
+                  pegamentnih listova. Vrlo lijepo i dobar očuvan rukopis prepisao je također Bartol Krbavac, a on se može
+                  zvat i beramski jer je rano bio u uporabi. To se može doznati iz kalendara u kojem je crvenom bojom označen
+                  blagdan svetog Martina, biskupa i ispovjednika, a njemu je posvećena crkva u Bermu. Kalendar je u ovom
+                  misalu zanimljiv i po tzv. alegorijama mjeseci, tj. po sličicama koje prikazuju posao tipičan za određeni
+                  mjesec.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Brevijar popa Mavra" id="brevijar-mavra">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/mavro.png" />
+               <h2 class="timeline__content-title">1460.</h2>
+               <p class="timeline__content-desc"><strong><em>Brevijar popa Mavra</em></strong> je rukopis od 417 listova
+                  pisan ustavnom glagoljicom dvostupačno s po 30 redaka i urušen inicijalima crvene i zelene boje s elementima
+                  pletera. Brevijar je napisao žakan Blaž Baromić za vrbničkog popa Mavra, a dovršio pop Jure iz Baške. To je
+                  bio putni brevijar koji je vrbnički pop Mavar nosio sa sobom u Konavle, o čemu svjedoče zabilješke u
+                  rukopisu. Sanktoral ovog brevijara ima dvije vlastite službe koje obilježje nacionalnih oficija: službu u
+                  čast solunskoj braći koja njihovo rođenje smješta u Solin i službu u čast sv. Iliji. Kodeks je bio u
+                  privatnom vlasništvu obitelji Pezzoli u Rimu sve do 1981. kad je otkupljen.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Petrisov zbornik" id="petrisov-zbornik">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/petrisov-zbornik.jpg" />
+               <h2 class="timeline__content-title">1468.</h2>
+               <p class="timeline__content-desc"><strong><em>Petrisov zbornik</em></strong> je sa svojih 350 listova
+                  najopsežniji, a po sadržaju među zanimljivijima hrvatskoglagoljskim srednjovjekovnim rukopisnim zbornicima i
+                  najvažniji izvor za istraživanje hrvatske srednjovjekovne književnosti. U njem se nalaze članci iz apokrifne
+                  književnosti, dijelovi srednjovjekovnih romana, enciklopedijski tekstovi, traktati, recepti i dr. U njegovu
+                  jeziku miješaju se čakavština, kajkavština i staroslavenski jezik. Ne zna se je li pisan u Istri ili na
+                  ozaljskome području.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Misal po zakonu rimskoga dvora" id="misal-rimski-dvor">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/rimski-misal.jpg" />
+               <h2 class="timeline__content-title">1483.</h2>
+               <p class="timeline__content-desc"> S glagoljaštvom započinje pisana, tj. zabilježena povijest hrvatskoga
+                  jezika, povijest hrvatske knjige i uopće povijest hrvatske pisane kulture. O snazi i dosegu te baštine
+                  govori činjenica da s glagoljašima započinje povijest hrvatskoga tiska i da je glavnina hrvatskih inkunabula
+                  tiskana upravo na glagoljici. Inkunabule su knjige tiskane na samim početcima tiska u Europi, od 1455. do
+                  1500. godine. Samo 28 godina nakon Gutenbergove Biblije i devet godina nakon prvotiska latinskoga misala
+                  otisnuta je prva hrvatska tiskana knjiga – glagoljični <strong><em>Misal po zakonu rimskoga
+                  dvora</em></strong>, čije je tiskanje dovršeno 22. veljače 1483. godine.<br>Od ukupno devet poznatih
+                  hrvatskih inkunabula &scaron;est ih je otisnuto glagoljicom. Uz <em>Misal </em>iz 1483. to su <em>Brevijar
+                  po zakonu rimskoga dvora</em> (1491.), <em>Baromićev brevijar</em> (1493.), <em>Senjski misal</em> (1494.)
+                  i <em>Spovid općena</em> (1496.). Za <em>Ispovid</em> (1492.) znamo da je otisnuta, ali se do danas nije
+                  na&scaron;ao nijedan njezin primjerak.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Prvotisak brevijara" id="prvotisak">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/prvotisak.jpg" />
+               <h2 class="timeline__content-title">1491.</h2>
+               <p class="timeline__content-desc"><strong><em>Hrvatskoglagoljski tiskani brevijar</em></strong> iz 1491.
+                  godine u prvom dijelu temporala (do početka korizme) slaže se s najstarijom glagoljskom tradicijom,
+                  sačuvanom npr. u I. vrbničkom brevijaru. U ostalom dijelu godine slijedi jednu mlađu tradiciju, ali
+                  različitu od zadarsko-krbavskih brevijara. U sanktoralu se slaže s onim istarskim brevijarima koji nemaju
+                  kult sv. Ćirila i Metodija ni jače istaknutih franjevačkih svetkovina. Za jezik brevijara iz 1491.
+                  karakteristična je češća upotreba zamjenice če mjesto čьto. Vjerojatno je dakle i ovaj prvotisak djelo
+                  istarskih glagoljaša, iako po svojim tehničkim osobinama zaostaje za prvotiskom misala iz 1483.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Senjska tiskara" id="senjska-tiskara">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/senjska-tiskara.png" />
+               <h2 class="timeline__content-title">1494.</h2>
+               <p class="timeline__content-desc"> U Senju od 1494. do 1508. djelovala je glagoljična tiskara, koju je
+                  utemeljio Krčanin i senjski kanonik Blaž Baromić sa suradnicima. Danas je poznato sedam naslova izdanih u
+                  toj tiskari: <em>Senjski misal</em> (1494.), <em>Spovid općena</em> (1496.), <em>Naručnik plebanušev</em>
+                  (1507.), <em>Mirakuli slavne deve Marije</em> (1507./1508.), <em>Meštrija od dobra umrtija s ritualom
+                  </em>(1507./1508.), <em>Transit sv. Jerolima</em> (1508.) i <em>Korizmenjak</em> (1508.).
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Drugi Novljanski brevijar" id="drugi-novaljski-brevijar">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/drugi-novaljski.png" />
+               <h2 class="timeline__content-title">1495.</h2>
+               <p class="timeline__content-desc"> <strong><em>Drugi Novljanski brevijar</em></strong> poznat još kao
+                  <em>Zapis popa Martinca</em> sadrži opis o porazu hrvatske plemičke vojske od Osmanlija na Krbavskome polju
+                  1493.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Žgombičev zbornik" id="zgombicev-zbornik">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/zgombicev-zbornik.png" />
+               <h2 class="timeline__content-title">16. st</h2>
+               <p class="timeline__content-desc">Hrvatskoglagoljski Žgombićev zbornik</em></strong> iz 16. stoljeća smatra se
+                  jednom od najvažnijih hrvatskih zbirki srednjovjekovnih književnih tekstova Sadrži dvadesetak tekstova, od
+                  kojih dio potječe iz grčko-bizantsko-crkvenoslavenskih matica, a dio iz zapadnoeuropskih književnih izvora.
+                  Ta dvojnost izvora odakle je crpljena građa tipična je za cjelokupan korpus hrvatske srednjovjekovne
+                  književnosti.<br>Kodeks je napisan na papiru i ima 125 listova, a sastoji se od triju dijelova različite
+                  starine. Najstariji i najveći dio s više od stotinu listova – od 24 do 125 – napisan je između 1520. i 1530.
+                  godine. Drugi dio, na listovima od 11 do 23, nastao je prema Štefaniću najkasnije oko 1540. godine. Treći,
+                  najmlađi dio, potječe iz vremena oko 1582. godine. Obuhvaća deset listova koji su uvezani na početku knjige.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Prva hrvatskoglagoljska početnica" id="prva-hrvatskoglagoljska-pocetnica">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/pocetnica.png" />
+               <h2 class="timeline__content-title">1527.</h2>
+               <p class="timeline__content-desc"><strong><em>Prva hrvatskoglagoljska početnica</em></strong> otisnuta u
+                  Veneciji 1527. je najstarija hrvatska glagoljska početnica. Tiskana je u tiskari Andree Torresanija.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Misal Pavla Modrušanina" id="misal-modrusanina">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/misal_pavla_modrusanina.jpg" />
+               <h2 class="timeline__content-title">1529.</h2>
+               <p class="timeline__content-desc"><strong><em>Misal Pavla Modrušanina</em></strong> otisnut je u Veneciji
+                  1529. Smatra se jednim od najljepših hrvatskih glagoljičnih misala. Modrušanin je u tiskani kalendar dodao
+                  stihove o godišnjim dobima i tako ostvario svoj jedini pjesnički pokušaj. Zanimljivo je da se upravo uz 22.
+                  veljače nalazi zapis kojim se najavljuje početak proljeća.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Misal hruacki" id="misal-hruacki">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/hruacki.png" />
+               <h2 class="timeline__content-title">1531.</h2>
+               <p class="timeline__content-desc">Modruški bisku Šimun Kožičić Benja tiskao <strong><em>Misal
+                  hruacki</em></strong> u Rijeci. Smatra se najopsežnijim i najljepšim Kožičevim dijelom. Knjiga je
+                  tiskana na 8 nepaginiranih i 248 paginiranih listova te sadrži mnogo glagoljskih inicijala i gotičkih
+                  ilustracija od kojih neke sadrže antropomorfne likove.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Brozićev brevijar" id="brozicev-brevijar">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/brozic.png" />
+               <h2 class="timeline__content-title">1561.</h2>
+               <p class="timeline__content-desc">Knjiga je s kojom završava najstarije, najbogatije i najutjecajnije
+                  razdoblje hrvatskoga glagoljičnog tiskarstva <strong><em>Brozićev brevijar</em></strong><em>. </em>Tiskana
+                  je 1561. u Veneciji, a pripremio ju je Nikola Brozić iz Omišlja na Krku. Riječ je zapravo o novome izdanju
+                  <em>Baromićeva brevijara </em>iz 1493. godine, prve hrvatskoglagoljične knjige kojoj je u kolofonu navedeno
+                  kad ju je, gdje i tko tiskao. Brozićevo je izdanje dopunjeno pojedinim službama čiji je tekst djelomice
+                  pohrvaćen.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Glagoljica u doba tiskare Propagande Fide" id="Propagande-Fide">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Propagande-Fide.png" />
+               <h2 class="timeline__content-title">16. st.</h2>
+               <p class="timeline__content-desc">U 17. stoljeću Kongregacija za širenje vjere u Rimu (<em>Propaganda
+                  Fide</em>) naredila je da se hrvatske glagoljske knjige prilagode ruskoj redakciji jezika, kakvu su
+                  koristili i ukrajinski grkokatolici, kako bi se pravoslavni Slaveni lakše približili Katoličkoj Crkvi.<br>
+                  Zbog toga dolazi do rusifikacije hrvatskih tekstova i promjena u glagoljskoj grafiji. Liturgijske knjige sve
+                  više dobivaju obilježja istočnoslavenskog jezika, dok nabožna i neliturgijska literatura ostaje bliža
+                  domaćem govoru.
+                  Istodobno se pojavljuju pokušaji da se stvori jedinstveni slavenski književni jezik razumljiv svim
+                  Slavenima, no sve više raste razlika između liturgijskog jezika i svakodnevnog govora.<br>
+                  Unatoč kontroli <em>Propagande Fide</em>, glagoljica se i dalje koristi izvan Rima, primjerice u župnim
+                  zapisima, bratovštinama i lokalnim rukopisima.
+                  Budući da su rusificirani tekstovi djelovali strano i teško razumljivo, mnogi glagoljaši su ih napustili i
+                  počeli koristiti latinične knjige na narodnom jeziku, poznate kao šćavet.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Levakovićev misal" id="Levakovićeva-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Levakoviceva-misal.jpg" />
+               <h2 class="timeline__content-title">1631.</h2>
+               <p class="timeline__content-desc">Levakovićev misal iz 1631. godine, poznat i kao <em>Misal rimski va ezik
+                  slavenskij</em> ili <em>Missale Romanum Slavonico idiomate</em>, značajno je djelo hrvatske glagoljaške
+                  baštine. Rafael Levaković, franjevac iz Jastrebarskog, priredio ga je u Rimu pod okriljem Kongregacije za
+                  širenje vjere (<em>Propaganda Fide</em>), u skladu s odlukama Tridentskoga koncila. Misal je tiskan
+                  glagoljicom i predstavljao je pokušaj standardizacije liturgijskih knjiga na hrvatskom crkvenoslavenskom
+                  jeziku. Levaković je preveo nove dijelove s latinskog, dok je postojeće tekstove preuzeo iz starijih
+                  glagoljskih misala. Uveo je i gregorijansku notaciju, što je bilo novo u glagoljaškoj tradiciji. Unatoč
+                  važnosti, misal nije bio dobro prihvaćen među glagoljašima, dijelom zbog visoke cijene i odstupanja od
+                  ustaljene tradicije .​
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Levakovićev brevijar" id="Levakovićev-brevijara">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Levakoviceva-brevijar.jpg" />
+               <h2 class="timeline__content-title">1648.</h2>
+               <p class="timeline__content-desc">Levakovićev brevijar, službeno nazvan <em>Časoslovь rimskii slavinskimь
+                  êzikomь</em> (<em>Breviarivm Romanvm Slavonico idiomate</em>), tiskan je 1648. godine u Rimu pod
+                  pokroviteljstvom Kongregacije za širenje vjere (Propaganda Fide). Priredio ga je franjevac Rafael Levaković
+                  uz pomoć unijatskog biskupa Metodija Terleckog.<br>Tekst je tiskan glagoljicom, ali jezik pokazuje snažan
+                  utjecaj istočnoslavenskih elemenata, što je izazvalo kritike zbog odstupanja od tradicionalne hrvatske
+                  glagoljaške jezične norme.<br>
+                  Brevijar predstavlja važan pokušaj liturgijske i jezične reforme te svjedoči o naporima Katoličke crkve u
+                  17. stoljeću da prilagodi bogoslužje lokalnim jezicima​
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Paštrićev brevijar" id="Pastricev-brevijar">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Pastricev-brevijar.jpg" />
+               <h2 class="timeline__content-title">1688.</h2>
+               <p class="timeline__content-desc">​Paštrićev brevijar iz 1688. godine, službeno nazvan <em>Časoslovь rimskij
+                  slavinskimь ezikomь</em>. Brevijar sadrži molitve i čitanja za dnevne liturgijske časove, usklađene s
+                  rimskim obredom prema reformama Tridentskog sabora. Paštrić je prilikom priređivanja koristio prethodna
+                  izdanja, posebno Levakovićevo, ali je također unio ispravke i preveo nove oficije, nastojeći prilagoditi
+                  sadržaj suvremenim liturgijskim zahtjevima.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Paštrićev misal" id="Pastricev-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Pastricev-misal.jpg" />
+               <h2 class="timeline__content-title">1706.</h2>
+               <p class="timeline__content-desc">​Paštrićev misal iz 1706. godine, službeno nazvan <em>Missal rimskiĵ va ezik
+                  slovenskiĵ sazdan povoleniem P.G.N. pape Urbana Osmago</em>, predstavlja dopunjeno izdanje Levakovićeva
+                  misala iz 1631. godine. Iako je zadržao osnovnu strukturu prethodnog izdanja, Paštrić je unio određene
+                  jezične promjene, uključujući i elemente istočnoslavenskih jezičnih osobina.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Karamanov misal" id="Karamanov-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/karamanov_misal.jpg" />
+               <h2 class="timeline__content-title">1741.</h2>
+               <p class="timeline__content-desc">Karmanov misal (Missal rimskiĵ) iz 1741. godine predstavlja posljednje izdanje rimskog misala
+                  na glagoljici koje je objavila Kongregacija za širenje vjere u Rimu. Izdanje je priredio Matej Karaman,
+                  tadašnji svećenik i kasniji zadarski nadbiskup.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Karamanov brevijar" id="Karamanov-brevijar">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/Karamanov-brevijar.jpg" />
+               <h2 class="timeline__content-title">1791.</h2>
+               <p class="timeline__content-desc">Karamanov brevijar iz 1791.,<em>Breviarium Romanum slavonico idiomate iussu SS. D. N. Papae Pii Sexti editum</em> (Časoslov rimski slavenskim jezikom, izdan po naredbi pape Pija VI). Iako formalno odobren i vrlo kvalitetno tiskan
+                  (tiskala Kongregacija za širenje vjere u Rimu), nije naišao na široko prihvaćanje među hrvatskim
+                  glagoljašima. Njegova rusifikacija jezika bila je strana osjećaju naroda i svečenika koji su težili
+                  liturgiji na narodnom hrvatskom jeziku ili na staroj hrvatskoj redakciji staroslavenskog jezika.<br> Ovo je
+                  zadnje veliko i službeno izdanje glagoljskog brevijara koje je tiskano u Rimu. Nakon ovog izdanja, došlo je do postepenog napuštanja
+                  rusificiranog jezika u liturgijskim knjigama. ​
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Grande munus" id="grande-munus">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/papa-leon-xiii.jpg" />
+               <h2 class="timeline__content-title">1880.</h2>
+               <p class="timeline__content-desc">Enciklika pape Leona XIII. izdaje <strong><em>Veliko poslanje (Grande
+                  munus)</em></strong> izdana je povodom 1000. obljetnice djelovanja sv. Ćirila i Metoda. Papa veliča
+                  djelovanje svete braće te za njih uvodi blagdan u kalendar cijele katoličke crkve.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Parčićev misal" id="parcicev-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/dragutin_parcic.jpg" />
+               <h2 class="timeline__content-title">1893.</h2>
+               <p class="timeline__content-desc">Drgutin Parčić 1893. prirerdio i objavio <strong><em>Misala i
+                  Obrednika</em></strong> na crkvenoslavenskom jeziku hrvatske redakcije. Tom objavom je označen kraj
+                  rusifikacije hrvatskih crkvenoslavenskih liturgijskih knjiga i povratak izvornom hrvatskom crkvenoslavenskom
+                  jeziku.<br>Drugo izdanje ovog misala izdano je 1896., a treće 1905.
+               </p>
+            </div>
+         </div>
+        
+         <div class="timeline-item" data-text="Ćirilometodijana kao znanstvena disciplina" id="Cyrillomethodiana">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/jazu.jpg" />
+               <h2 class="timeline__content-title">19. st.</h2>
+               <p class="timeline__content-desc">Ćirilometodijana (Cyrillomethodiana) kao znanstvena disciplina u Hrvatskoj
+                  razvila se u sklopu JAZU – Jugoslavenska akademija znanosti i umjestnosti (današnji HAZU – Hrvatska
+                  akademija znanosti i umjetnosti), osobito zahvaljujući radu Franje Račkog i njegovih suradnika u drugoj
+                  polovici 19. stoljeća.<br>
+                  Danas je Ćirilometodijana međudisciplinarno područje između povijesti, lingvistike, teologije i slavistike.
+                  Ima vlastite međunarodne skupove i publikacije.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Opadanje korištenja glagoljice" id="opadanje-glagoljice">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/jagic.png" />
+               <h2 class="timeline__content-title">19. i 20. st.</h2>
+               <p class="timeline__content-desc">
+                  Krajem 19. i početkom 20. stoljeća glagoljica postupno gubi svoju svakodnevnu funkciju. Ovaj proces bio je
+                  uvjetovan nizom čimbenika, širenje latiničnog pisma kao dominantnog u administrativnim, obrazovnim i
+                  vjerskim institucijama, te modernizacijske tendencije unutar Katoličke crkve. Ipak, dosta ljudi se bavi glagoljicom i glagoljaštvom kao predmetom modernog
+                  znanstvenog istraživanja i dijela kulturne baštine.<br> Npr. hrvatski slavist Vatroslav Jagić proučavao je podrijetlo glagoljice (Glagoljičko pismo u Slavena – Glagoličeskoe pis’mo u Slavjan, 1911).
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Staroslavenska akademija" id="staroslavenska-akademija">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/stin-akademija.png" />
+               <h2 class="timeline__content-title">1902.</h2>
+               <p class="timeline__content-desc">Temelji Staroslavenskoga instituta položeni su osnivanjem
+                  <strong>Staroslavenske akademije</strong> 1902. Staroslavenska je akademija 1928. godine ujedinjena s
+                  Hrvatskom bogoslovskom akademijom u Zagrebu kao njezin Staroslavenski odsjek.Pročelnikom odsjeka imenovan je
+                  mons. dr. Svetozar Ritig (Slavonski Brod, 1873. – Zagreb, 1961.). God. 1939. mons. Ritig dao je ostavku na
+                  pročelništvo čekajući bolja vremena. Uspio je obnoviti Staroslavensku akademiju pri Komisiji za vjerske
+                  poslove Vlade Narodne Republike Hrvatske (NRH) kojoj je bio predsjednik.<br>Akademija je obnovljena 15.
+                  rujna 1948. godine na skupštini Društva svećenika Hrvatske u Rijeci. Odlučeno je da njezino sjedište bude u
+                  Zagrebu. Predsjednik Vlade NRH povjerio je mons. Ritigu vođenje Akademije.
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Treće izdanje Parčićevog misala 1905."
+            id="trece-izdanje-parcicevog-misala-1905">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/parcic-3.png" />
+               <h2 class="timeline__content-title">1905.</h2>
+               <p class="timeline__content-desc">​Treće izdanje Parčićevog misala iz 1905. godine predstavlja posljednju
+                  liturgijsku knjigu tiskanu glagoljicom u povijesti hrvatskog glagoljaštva. Ovo izdanje objavljeno je
+                  posthumno, nakon smrti Dragutina Antuna Parčića 1902. godine, a uredio ga je češki slavist Josef Vajs.
+                  Tiskano je u Rimu, a poznato je i kao „Vajsov misal“. Ovo izdanje temelji se na Parčićevom izdanju iz 1893.,
+                  ali je Vajs unio određene jezične i liturgijske korekcije kako bi se uskladilo s tadašnjim normama. Treće
+                  izdanje Parčićevog misala iz 1905. godine označava kraj tiskanja glagoljskih liturgijskih knjiga i
+                  simbolizira kraj jedne epohe u hrvatskoj liturgijskoj i kulturnoj povijesti. 
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Tipografia Poliglotta Propagande" id="Tipografia-Poliglotta-Propagande">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/vatikan.jpg" />
+               <h2 class="timeline__content-title">1909.</h2>
+               <p class="timeline__content-desc">​Godine 1909., tijekom pontifikata pape Pija X., Tipografia Poliglotta
+                  Propaganda Fide inkorporirana je u vatikansku tipografiju, čime su daljnje liturgijske knjige tiskane unutar
+                  službene tiskare Svete Stolice. Ova integracija omogućila je centralizaciju tiskarskih aktivnosti i nastavak
+                  tiskanja liturgijskih knjiga i drugih vjerskih materijala pod okriljem Vatikanove tipografije. <br>
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Vajsov misal" id="vajsov-misal">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/vajsov-misal.jpg" />
+               <h2 class="timeline__content-title">1927.</h2>
+               <p class="timeline__content-desc">Vajsov misal, službenog naziva Rimski misal slověnskim jezikom prěsv. g.
+                  Urbana papi VIII. povelěnjem izdan, nastao je 1927.kao transliteracija Parčićeva misala na latinicu. Nakon
+                  Prvog svjetskog rata, jugoslavenski biskupi zatražili su transliteraciju Parčičevog misala na latinicu kako
+                  bi se olakšala njegova uporaba, s obzirom na sve manju pismenost na glagoljici među svećenstvom i
+                  vjernicima. ​Glagoljica se još u misalu pojavljuje na par mjesta uz latinicu kod u ordinariju mise. Misal je
+                  priredio češki slavist mons. Josef Vajs, koji je prethodno uredio treće izdanje Parčićevog misala iz 1905.
+                  godine.<br>Uporaba Vajsovog misala u liturgiji nastavila se sve do reforme Drugog vatikanskog sabora (1962.
+                  - 1965.)
+               </p>
+            </div>
+         </div>
+         <div class="timeline-item" data-text="Staroslavenski institut" id="staroslavenska-institut">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/povijest_stin.jpg" />
+               <h2 class="timeline__content-title">1952.</h2>
+               <p class="timeline__content-desc"> Kao predsjednik Komisije za vjerske poslove mons. Ritig predložio je
+                  predsjedniku Vlade NRH da se naziv Staroslavenska akademija promijeni u naziv <strong>Staroslavenski
+                  institut</strong>. Predsjednik Vlade NRH Vladimir Bakarić potpisao je 18. ožujka 1952. uredbu kojom se
+                  osniva Staroslavenski institut sa zadatkom da skuplja, obrađuje i proučava staroslavenske i stare hrvatske
+                  spomenike i drugo gradivo potrebno za izdavanje stručnih rječnika, monografija, zbornika i sličnih izdanja i
+                  da ih objelodanjuje te da uz stručnu knjižnicu osnuje fototeku, u kojoj će prikupljati snimke svih važnijih
+                  glagoljskih spomenika i ostalih spomenika koji se nalaze u knjižnicama i arhivima izvan Zagreba ili u
+                  inozemstvu.<br>Staroslavenski institut posvećen je istraživanju, otkrivanju, prepoznavanju, sustavnomu
+                  popisivanju i obrađivanju hrvatskih i staroslavenskih glagoljskih rukopisa, natpisa i tiskanih knjiga.
+               </p>
+            </div>
+         </div>
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@stin" />
-<meta name="twitter:title" content="Povijest glagoljice i glagoljaštva" />
-<meta name="twitter:description" content="Vremenska lenta koja prikazuje bitne događaje te nastanke ključnih spomenika i zapisa vezanih za razvoj glagoljice i glagoljaštva u Hrvatskoj." />
-<meta name="twitter:image" content="og-slika.jpg" />
-</head>
-<body>
-<!-- 
- original code
-Copyright (c) 2024 Mert Cukuren (https://codepen.io/knyttneve/pen/bgvmma)
+       
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+         <div class="timeline-item" data-text="Egregiae Virtutis" id="egregiae-virtutis">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/papa-ivan-2.jpg" />
+               <h2 class="timeline__content-title">1980.</h2>
+               <p class="timeline__content-desc"> 31. prosinca 1980. papa Ivan Pavao II. pismom <strong><em>Egregiae
+                  Virtutis</em></strong> proglasio je slavenske apostole, svetu braću Girila i Metoda suzaštitnicima
+                  Europe.
+               </p>
+            </div>
+         </div>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+         <div class="timeline-item" data-text="Aleja glagoljaša" id="aleja-glagoljasa">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/aleja.jpg" />
+               <h2 class="timeline__content-title">1977. do 1985.</h2>
+               <p class="timeline__content-desc"> Aleja glagoljaša spomenička je cesta smještena u  Istri između gradića Roča i Huma. Duga je oko sedam do osam kilometara i sastoji se od jedanaest kamenih spomenika koji slave glagoljicu. Aleja je nastajala između 1977. i 1985. godine, a autori projekta su kipar Želimir Janeš, književnik Josip Bratulić i Zvane Črnja (idejni začetnik projekta). Svaki spomenik u aleji tematizira jedno poglavlje iz glagoljaške prošlosti – od početaka pismenosti i vjerskog prevođenja, tiskarstva, do pojedinih znamenitih glagoljaša i kulturnih događaja. 
+               </p>
+            </div>
+         </div>
 
--->
 
-<!-- ilirico 4 i krčki natipis nađi nove slike -->
-<div class="timeline-container" id="timeline-1">
-  <div class="timeline-header">
-    <h2 class="timeline-header__title">Povijest glagoljaštva</h2>
-    <h3 class="timeline-header__subtitle">lenta vremena</h3>
+         <div class="timeline-item" data-text="Glagoljski natpisi"
+         id="glagoljski-natpisi">
+         <div class="timeline__content">
+            <img class="timeline__img" src="slike/fucic.jpg" />
+            <h2 class="timeline__content-title">1982.</h2>
+            <p class="timeline__content-desc">Hrvatski povjesničar umjetnosti Branko Fučić u knjizi <em>Glagoljski natpisi</em> (1982) okupio je, paleografski i arheološki obradio sve pronađene glagoljske natpise i grafite. Što uključuje više od 500 njih nastalih između 11. i 18. stoljeća. Više od polovice otkrio je sam, ponajviše u Istri i na Kvarneru. Među najznačajnijim su njegovim otkrićima <em>Ročki glagoljski abecedarij</em>, <em>Humski grafit</em>, <em>Valunska ploča</em> (čiji je natpis prvi pročitao), <em>Grdoselski</em> i <em>Supetarski ulomak</em>. Značajno je pridonio i određivanju Bašćanske ploče kao lijevoga pluteja oltarne pregrade, a njegova tekstna rekonstrukcija natpisa s te ploče danas se smatra najprihvaćenijom.
+            </p>
+         </div>
+      </div>
+
+
+         <div class="timeline-item" data-text="Društvo prijatelja glagoljice" id="drustvo-prijatelja-glagoljice">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/dpg_logotip.jpg" />
+               <h2 class="timeline__content-title">1993.</h2>
+               <p class="timeline__content-desc"><strong>Društvo prijatelje glagoljice</strong> osnovano je 22. veljače
+                  1993.,
+                  točno na 510. obljetnicu hrvatskoga prvotiska <em>Misal po zakonu rimskoga dvora</em> (1483). Bavim se
+                  različitim aktivnostima vezanima za promicanje i održavanje glagoljaške baštine. Sjedište društva je pri
+                  Matici hrvatskoj, na Strossmayerovom trgu 4 u Zagrebu. Članom Društva mogu postati pojedinci, udruge,
+                  ustanove i druge pravne osobe iz zemlje i svijeta koji u cijelosti prihvaćaju pravila Društva i spremni
+                  su surađivati u njegovim djelatnostima. Imaju časopis Bašćina koji izlazi jednom godišnje.
+               </p>
+            </div>
+         </div> 
+         
+         <div class="timeline-item" data-text="Glagoljaško pjevanje dobiva status kao zaštićeno kulturno dobro" id="glagoljasko-pjevanje-zasticena-kultura">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/pjevanje.jpg" />
+               <h2 class="timeline__content-title">2008.</h2>
+               <p class="timeline__content-desc">Glagoljaško pjevanje je unikatno liturgijsko
+                  i izvanliturgijsko pjevanje koje je proizišlo iz
+                  pjevanih tekstova glagoljaškog bogoslužja
+                  temeljem liturgijskih knjiga pisanih glagoljicom.<br> Ministarstvo kulture i medija Republike Hrvatske godine 2008. donosi rješenje kojim glagoljaško pjevanje postaje zaštićeno nematerijalno kulturno dobro Republike Hrvatske (reg. broj Z-3620).
+               </p>
+            </div>
+         </div>
+
+
+         <div class="timeline-item" data-text="Umijeće čitanja, pisanja i tiskanja glagoljice dobiva status kao zaštićeno kulturno dobro" id="umjece-glagoljice-zasticena-kultura">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/MK-glagoljica.jpg" />
+               <h2 class="timeline__content-title">2014.</h2>
+               <p class="timeline__content-desc">Ministarstvo kulture u ožujku 2014. donosi rješenje da umijeće čitanja, pisanja i tiskanja glagoljice ima svojstvo nematerijalnog kulturnog dobra (reg. broj Z-6236), te se na njega primjenjuje sustav mjera zaštite.
+               </p>
+            </div>
+         </div>
+
+
+         <div class="timeline-item" data-text="Znanstveni centar izvrsnosti za hrvatsko glagoljaštvo" id="zci">
+          <div class="timeline__content">
+             <img class="timeline__img" src="slike/zci.png" />
+             <h2 class="timeline__content-title">2014.</h2>
+             <p class="timeline__content-desc">Znanstveni centar izvrsnosti za hrvatsko glagoljaštvo utemeljen je 10. studenog 2014. godine od Ministarstva znanosti, obrazovanja i športa Republike Hrvatske. Ima za misiju i programski cilj uspostaviti i razviti interdisciplinarni teorijski okvir i model za proučavanje glagoljaških pisarskih centara.  Tj. stvoriti model istraživanja koji bi kasnije mogao biti primijenjen i na ostale glagoljaške pisarske centre i rukopise za koje nije utvrđeno u kojem su skriptoriju napisani.<br>
+              Centar je smješten u Staroslavenskome institutu u Zagrebu, a okuplja i stručnjake s Filozofskoga fakulteta u Zagrebu, Filozofskoga fakulteta u Rijeci, Katoličkoga bogoslovnog fakulteta u Zagrebu, Instituta za povijest umjetnosti iz Zagreba, Zavoda za povijesne i društvene znanosti HAZU-a u Rijeci te inozemne suradnike iz Instituta za slavistiku Bečkoga sveučilišta, Slavističkoga instituta Češke akademije znanosti u Pragu te Fakulteta za slavistiku Sofijskoga sveučilišta.
+             </p>
+          </div>
+       </div>
+
+
+         <div class="timeline-item" data-text="Prva gramatika hrvatskoga crkvenoslavenskog jezika" id="gramatika">
+          <div class="timeline__content">
+             <img class="timeline__img" src="slike/gramatika.jpg" />
+             <h2 class="timeline__content-title">2014.</h2>
+             <p class="timeline__content-desc">Knjiga <em>Hrvatski crkvenoslavenski jezik</em> (2014) predstavlja prvu cjelovitu gramatiku hrvatskoga crkvenoslavenskoga jezika, a rezultat je višedesetljetnoga rada sedmeročlanog autorskog tima predvođenog Milanom Mihaljevićem. Izdanje je objavljeno u suradnji Hrvatske sveučilišne naklade i Staroslavenskog instituta.
+             </p>
+          </div>
+       </div>
+
+
+         <div class="timeline-item" data-text="Dan hrvatske glagoljice i glagoljaštva" id="dan-glagoljice">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/dan.png" />
+               <h2 class="timeline__content-title">2019.</h2>
+               <p class="timeline__content-desc"> Godine 2019. Hrvatski sabor dan 22. veljače proglasio je <strong>Danom
+                  hrvatske glagoljice i glagoljaštva</strong>. <br>Proglašenje tog dana inicirao je Institut za hrvatski jezik i
+                  jezikoslovlje povodom toga što je 22. veljače spomen na dan kada je 1483. godine tiskana prva hrvatska
+                  knjiga <em>Misal po zakonu rimskoga dvora</em>.
+               </p>
+            </div>
+         </div>
+ <div class="timeline-item" data-text="Osnivanje Centra za istraživanje glagoljaštva" id="centar-gla">
+  <div class="timeline__content">
+     <img class="timeline__img" src="slike/glalab.png" />
+     <h2 class="timeline__content-title">2020.</h2>
+     <p class="timeline__content-desc"> <a href="https://glagolab.unizd.hr/">Centar za istraživanje
+        glagoljaštva</a> je znanstveno-istraživački centar Sveučilišta u Zadru. Odluku o osnivanju Centra kao
+        ustrojbene jedinice Sveučilišta u Zadru donio je Senat Sveučilišta u Zadru na svojoj 5. Sjednici u ak. god.
+        2019./2020., održanoj 25. veljače 2020.<br>Centar koordinira znanstvena istraživanja povezana s glagoljicom,
+        proučava glagoljske tekstove, te se bavi kulturnim i historiografskim aspektima glagoljaštva. Aktivnosti
+        uključuju razvoj baza podataka, digitalizaciju građe, izdavaštvo, uvođenje glagoljaških tema u obrazovanje,
+        promicanje baštine kroz suvremene oblike komunikacije, uključivanje javnosti u istraživanja te organizaciju
+        znanstvenih skupova.
+     </p>
   </div>
-  <div class="timeline">
-    <div class="timeline-item" data-text="Djelovanje Ćirila i Metoda" id="ciril-metod">
-      <div class="timeline__content"><img class="timeline__img" src="slike/ciril-metod.jpeg"/>
-        <h2 class="timeline__content-title">863.</h2>
-        <p class="timeline__content-desc">Autorom glagoljice smatra se sv. Konstantin Ćiril, Grk iz Soluna (826. ili 827. – 869.). Brojni su Solunjani dobro znali slavenski jezik zato što je u okolici njihova grada bila naseljena nemala slavenska zajednica. Zbog svoje učenosti, mudrosti i zbog toga što je bio profesor filozofije, Ćiril dobiva nadimak Filozof. Za potrebe misije među moravskim Slavenima (središnja Europa), koju je 862. godine pokrenuo knez Rastislav, Ćiril je osmislio novo alfabetsko fonološko pismo  glagoljicu s najviše 38 znakova koristeći se elementima starijega sustavnog pisma i oblikovao književni jezik starocrkvenoslavenski na temelju govora bugarsko-makedonskoga narječja 863. <br>Ćirilov je najbliži suradnik bio njegov stariji brat Metod (oko 815. – 885.). Oni se jednim imenom nazivaju Svetom braćom ili Slavenskim apostolima i prosvjetiteljima. Njihovim su djelovanjem postavljeni temelji slavenske pisane kulture i uljudbe. </p>
-      </div>
-    </div>
-
-
-
-    <div class="timeline-item" data-text="Ćirilova smrt" id="smrt-ciril">
-      <div class="timeline__content"><img class="timeline__img" src="slike/smrt-cirila.jpg"/>
-        <h2 class="timeline__content-title">869.</h2>
-        <p class="timeline__content-desc">14. veljače 869 umire Ćiril. Nakon Ćirilove smrti Metoda požrtvovno djeluje sljedećih šesnaest godina kako bi učinci misije trajno zaživjeli među slavenskim narodima.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Metodova smrt" id="smrt-metod">
-      <div class="timeline__content"><img class="timeline__img" src="slike/smrt-metoda.jpg"/>
-        <h2 class="timeline__content-title">885.</h2>
-        <p class="timeline__content-desc">6. travnja umire Metod. Važno je spomenuti da nije sačuvan nijedan spomenik iz vremena nastanka staroslavenskoga jezika, tj. iz druge polovice 9. stoljeća, jer su svi uništeni poslije Metodove smrti. Najstariji sačuvani spomenici prijepisi su iz 10. i 11. stoljeća. </p>
-      </div>
-    </div>
-
-
-    <div class="timeline-item" data-text="Metodovi učenici protjerani iz Moravske" id="ucenici-metod">
-      <div class="timeline__content"><img class="timeline__img" src="slike/metodovi-ucenici.jpg"/>
-        <h2 class="timeline__content-title">886.</h2>
-        <p class="timeline__content-desc">Smrt Metoda bio je znak latinskomu kleru i protivnicima slavenske misije među Slavenima i protivnicima slavenskoga bogoslužja da obnove pritisak na slavenske misionare. Novoizabrani papa Stjepan V. pismom knezu Svatopluku zabranio je slavensko bogoslužje. Metodovi su učenici nakon toga početkom 886. zlostavljani, neki su i zarobljeni te protjerani. Večina njih je iz Moravske prešla u Bugarsku, a zarobljenici su bili prodavani u Veneciji te prešli na bizantski prostor, u Istru, na Kvarnerske otoke i u Dalmaciju. Time se u nepovoljnim okolnostima baština Svete braće proširila na prostoru Bugarske i Makedonije, kasnije među Hrvatima, Slovacima i Česima, a poslije i među druge slavenske narode.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Pisama pape Ivana X i zaključci splitskog sabora"  id="ivan-X">
-      <div class="timeline__content"><img class="timeline__img" src="slike/pismo.gif"/>
-        <h2 class="timeline__content-title">925. </h2>
-        <p class="timeline__content-desc">Prve pouzdane vijesti o uporabi prvoga slavenskog književnog jezika i pisma glagoljice kod Hrvata potječu iz 10. stoljeća, točnije iz godine 925., iz dvaju pisama pape Ivana X. U jednom pismu papa opominje dalmatinske biskupe zbog služenja bogoslužja na slavenskom jeziku, a u drugom prigovara prvome hrvatskome kralju Tomislavu i zahumskomu knezu Mihajlu Viševiću što to dopuštaju. Zaključci splitskih crkvenih sabora u ranom srednjem vijeku također svjedoče o postojanju slavenskoga bogoslužja. <br>Ova pisma time su prva potvrda glagoljaštva u Hrvatskoj.</p>
-      </div>
-    </div> 
-    
-    
-    <div class="timeline-item" data-text="Kijevski listići" id="kijevski-listic">
-      <div class="timeline__content"><img class="timeline__img" src="slike/kijevski.png"/>
-        <h2 class="timeline__content-title">10. st., 11./12. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Kijevski listići</em></strong>, jedan od najstarijih očuvanih glagoljičnih zapisa te najstariji starocrkvenoslavenski liturgijski spomenik. Listići fragment su sakramentara sa sedam listova, nastalih najranije krajem 9. ili tijekom 10. st. na crkvenoslavenskome jeziku. Čuvaju se u <a href="https://maps.app.goo.gl/ZJUwmDC2GawHkkKr9" target="_blank">Nacionalnoj knjižnici Ukrajine „V. I. Vernadski”</a> u Kijevu. Prva stranica, dodana vjerojatno u 12. st., napisana je na hrvatskome, a ostatak na srednjoeuropskome prostoru te sadržava najstariju poznatu molitvu Blaženoj Djevici Mariji na tome jeziku.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Drugi splitski sabor raspravlja o glagoljaštvu"  id="drugi-splitski-sabor">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Historia_Salonitana.jpg"/>
-        <h2 class="timeline__content-title">1060. </h2>
-        <p class="timeline__content-desc">Splitski crkveni sabor iz 1060. godine nije ukinuo slavensku službu Božju niti uporabu glagoljice, ali je naredio da svećenici moraju znati i latinski jezik u govoru i pismu. O tome saboru doznajemo u dijelu Toma Arhiđakon <em>Historia Salonitana</em> sastavljena u 13. st.</p>
-      </div>
-    </div>  
-
-    <div class="timeline-item" data-text="Plominski natpis" id="plominski">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Plominski_natpis.png"/>
-        <h2 class="timeline__content-title">11. st.</h2>
-        <p class="timeline__content-desc"> 
-          <strong><em>Plominski natpis</em></strong> kameni je reljef iz 11. stoljeća na crkvi sv. Jurja Staroga u Plominu u Istri. <em>Plominski natpis</em> ubraja se u najstarije spomenike hrvatskoga jezika. Povjesničari umjetnosti nisu sigurni je li na njemu prikazan lik sv. Jurja ili ilirski bog Silvan. Natpis, koji je mlađi od zagonetnoga prikaza kršćanskoga svetca ili starobožačkoga lika, glasi <em>se e pisъlъ s… </em>('ovo je pisao s...'). Taj se najstariji spomenik istarskoga glagoljaštva do danas sačuvao zahvaljujući tomu što je bio prekriven osinjacima. Zbog njih je ostao pošteđen od talijanaškoga uništavanja hrvatske materijalne kulturne baštine u prvoj polovici 20. stoljeća.</p>
-      </div>
-    </div> 
-
-    <div class="timeline-item" data-text="Konavoski natpis" id="konavoski">
-      <div class="timeline__content"><img class="timeline__img" src="slike/konavoski_natpis.png"/>
-        <h2 class="timeline__content-title">11. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Konavoski natpis</em></strong> i <em>Natpis iz Župe Dubrovačke</em> spadaju među najstarije hrvatskoglagoljične natpise i ujedno su najjužniji hrvatskoglagoljični natpisi. Urezan je na ulomku mramora antičkoga koja je vjerojatno bila rimska nadgrobna stel. Pronađen je 1990. uz groblje crkve Male Gospe podno tvrđave Soko u Konavlima.</p>
-      </div>
-    </div> 
-    <div class="timeline-item" data-text="Natpis Župe Dubrovačke" id="zupa-dubrovacka">
-      <div class="timeline__content"><img class="timeline__img" src="slike/zupa-dubrovacka.jpg"/>
-        <h2 class="timeline__content-title">11. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Glagoljski natpis iz Župe Dubrovačke</em></strong> nalazi se na ulomku krovnoga crijepa antičkoga podrijetla koji je pronađen 2007. prilikom arheološkog istraživanja groblja kraj <a href="https://maps.app.goo.gl/CAG4BiM7gmn4o2jRA" target="_blank">Crkve sv. Đurđa</a> između Petrače i Buića u Župi Dubrovačkoj. Otkriveni se dio srednjovjekovnoga groblja datira između 10. i 12. stoljeća. Nakon čišćenja kamenca s crijepa otkrivena su 102 glagoljska slova (19 grafema, 25 riječi, 8 ili 9 redaka) koji se datiraju 11. stoljećem. Kao epigrafski spomenik najranijega glagoljskoga razdoblja, natpis iz Župe Dubrovačke po dužini je teksta odmah iza Baščanske ploče. </p>
-      </div>
-    </div> 
-    <div class="timeline-item" data-text="Valunska ploča" id="valunska">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Valun_tablet.png">
-        <h2 class="timeline__content-title">11. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Valunska ploča</em></strong> kamena je nadgrobna ploča iz 11. stoljeća iz Valuna na otoku Cresu s dvojezičnim natpisom &ndash; na hrvatskome oblom glagoljicom te na latinskome latinicom. Riječ je o grobnome natpisu triju nara&scaron;taja &ndash; bake T&ecirc;he, sina Bratohne i unuka June. Hrvatskoglagoljični tekst glasi: <em>těha sinъ vъ(nu)kъ juna, </em>a latinski <em>Techa et filius eius Bratohna et Iunna nepus eius</em>.</p>
-      </div>
-    </div> 
-    <div class="timeline-item" data-text="Krčki natpis" id="krcki">
-      <div class="timeline__content"><img class="timeline__img" src="slike/krcki-natpis.jpg">
-        <h2 class="timeline__content-title">11. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Krčki natpis</em></strong> (11. st.) povezuje se sa Samostanom sv. Lovre na ulazu u Krk. Pisan je hrvatskim jezikom, oblom glagoljicom, no s pokušajem koordiniranja slova, u smjeru razvoja ustavne glagoljice.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Kločev glagoljaš" id="klovicev">
-      <div class="timeline__content"><img class="timeline__img" src="slike/klovicev.png"/>
-        <h2 class="timeline__content-title">11./12. st.</h2>
-        <p class="timeline__content-desc"> <strong><em>Kločev glagoljaš</em></strong> (<em>Glagolita Clozianus</em>) ili <em>Frankapanski kodeks</em> veličine 27 × 20,5 cm, jedini je sačuvani rukopis tzv. staroslavenskoga kanona s hrvatskoga prostora. Bio je u posjedu Ivana VII. Frankapana († 1486.), posljednjega krčkog gospodara iz te velikaške kuće, koja je kodeks čuvala kao relikviju vjerujući da ga je napisao sveti Jeronim. Sačuvani dio sadržava homilijar. Danas se 12 listova čuva u Trentu, a jedan u Innsbrucku. Prvotna saznanja, izvornik i analize toga zbornika objavio je Jernej Kopitar 1836. godine.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Budimpeštanski odlomci" id="budimpestanski-odlomak">
-      <div class="timeline__content"><img class="timeline__img" src="slike/budapest.png"/>
-        <h2 class="timeline__content-title">11./12. st.</h2>
-        <p class="timeline__content-desc"> <strong><em>Budimpeštanski odlomci</em></strong>, jedini hrvatskoglagoljični tekst koji još uvijek ima razliku između poluglasova jora i jera. Sačuvana su samo dva odlomka koja sadržavaju dio legende o Makariju. Čuvaju se u <a href="https://maps.app.goo.gl/j9n3HGhp8r1wnt8w9" target="_blank">Nacionalnoj knjižnici Széchényi</a> u Budimpešti.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Bašćanska ploča" id="bascanka-ploca">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Bascanska_ploca.png"/>
-        <h2 class="timeline__content-title">1100.</h2>
-        <p class="timeline__content-desc"><strong><em>Bašćanska ploča</em></strong> je najpoznatiji i najopširniji hrvatskoglagoljični spomenik. Nastala je na otoku Krku, kolijevci glagoljaštva, oko 1100. godine. Nalazila se u crkvici sv. Lucije u Jurandvoru kraj Baške. Pisana je prijelaznim tipom glagoljice s oble na uglatu. Služila je kao lijevi plutej u crkvenoj pregradi. Natpis ima 13 redova, počinje invokacijom, a zatim slijedi zapis popa Držihe o tome da je kralj Zvonimir darovao ledinu crkvi sv. Lucije. Navode se i svjedoci toga darivanja. Nakon toga opat Dobrovit svjedoči kako je s devetoro braće zidao crkvu u vrijeme kneza Kosmata. Na ploči se prvi put na hrvatskome jeziku spominje ime kralja Zvonimira i hrvatskoga naroda. Danas se Bašćanska ploča čuva u atriju <a href="https://maps.app.goo.gl/vTBYXuPuAysC91eYA" target="_blank">Hrvatske akademije znanosti i umjetnosti</a> u Zagrebu.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Darovnica slavnoga Dragoslava" id="darovnica-dragoslava">
-      <div class="timeline__content"><img class="timeline__img" src="slike/darovnica-dragoslava.jpg"/>
-        <h2 class="timeline__content-title">oko 1100.</h2>
-        <p class="timeline__content-desc"><em><strong>Darovnica slavnoga Dragoslava</strong></em> najstarija je poznata glagoljična isprava, napisana 1. siječnja 1100. godine u Dobrinju na otoku Krku, na hrvatskome jeziku. Izvorni je tekst izgubljen, a sačuvan je jedino prijevod s latinskoga na hrvatski (na slici), notarski akt Petra Periša iz 1724. godine. Najbolje čitanje darovnice dao je Milan Mihaljević 2000. godine, znatno različit u odnosu na ranija čitanja (<a href="https://hrcak.srce.hr/7256" target="_blank">vidi rad</a>).</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Bečki listići" id="becki-listic">
-      <div class="timeline__content"><img class="timeline__img" src="slike/becki-listic.jpg"/>
-        <h2 class="timeline__content-title">11./12. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Bečki listići</em></strong> je najstariji spomenik hrvatske liturgijske književnosti na hrvatskme crkvenoslavenskom jeziku i najstariji svjedok češko-hrvatskih kulturnih veza. Dva pergamentna lista ispisana formativnom glagoljicom potječu s kraja 11. se ili početka 12. stoljeća. </p>
-      </div>
-    </div>    
-    <div class="timeline-item" data-text="Baščanski ostrišci" id="bascanski-ostrisci">
-      <div class="timeline__content"><img class="timeline__img" src="slike/bascanski-ostrisci.jpg"/>
-        <h2 class="timeline__content-title">12. st.</h2>
-        <p class="timeline__content-desc"><em><strong>Baščanski ostrišci</strong></em> glagoljični su fragmenti pronađeni u Baškoj na otoku Krku. Spadaju među najstarije sačuvane glagoljične tekstove iz početne faze hrvatskoga crkvenoslavenskog jezika, a sadržavaju odlomak <em>Muke po Mateju</em>. Vinko Premuda pronašao ih je u Baškoj i čuvao u svojoj kući. Nakon njegove smrti ostavština je prebačena u Hrvatsku akademiju znanosti i umjetnosti, no ostrišci su nestali. Godine 1997. pronađeni su u <a href="https://maps.app.goo.gl/qXUMo5NveZrpgCgu6" target="_blank">Hrvatskome državnom arhivu</a>, pomiješani s ostavštinom Branimira Gušića.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Uglata glagoljica" id="uglata">
-      <div class="timeline__content"><img class="timeline__img" src="slike/uglata.jpg"/>
-        <h2 class="timeline__content-title">12./13. st.</h2>
-        <p class="timeline__content-desc">Razvija se uglata stilizacija glagoljice, koja se razlikuje od prvobitne okrugle (oble) glagoljice, karakteristične po kružiću kao jednome od elemenata. Ta uglata inačica, koja je svojstvena isključivo hrvatskomu području, naziva se hrvatskom glagoljicom. Najprepoznatljivija je u svojemu ustavnom obliku, koji je najzastupljeniji u liturgijskim knjigama poput misala i brevijara.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Ročki glagoljični abecedarij" id="rocki-gla">
-      <div class="timeline__content"><img class="timeline__img" src="slike/rocki-gla-abecedarij.jpg"/>
-        <h2 class="timeline__content-title">oko 1200.</h2>
-        <p class="timeline__content-desc"><strong><em>Ročki glagoljični abecedarij</em></strong> uparan u posvetnome križu crkve sv. Antona opata u Roču u Istri. Azbučni je niz od 34 znaka iz prijelaznoga razdoblja kad se počela oblikovati hrvatska uglata glagoljica. Sam natpis ispod žbuke otkrio je Branko Fučić 1949. godine.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Splitski fragment misala" id="splitski-misal">
-      <div class="timeline__content"><img class="timeline__img" src="slike/splitski.png"/>
-        <h2 class="timeline__content-title">13. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Splitski fragment Misala</em></strong> je list pergamenta iz početka 13. stoljeća napisan glagoljicom na crkvenoslavenskome jeziku s elementima ikavske štokavštine. Pronašao ga je Vjekoslav Štefanić 1957. godine. Fragment sadržava misne obrasce za prosinac, a koristio se u uvezu kartulara samostana sv. Anastazije u Splitu. Po brojnim ikavskoštokavskim obilježjima zaključeno je da je napisan u jugozapadnoj Bosni u posljednjoj fazi razvoja glagoljaštva na tome području.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Otpis pape Inocenta IV. senjskom biskupu Filipu" id="pismo-senjskom-biskupu-filipu">
-      <div class="timeline__content"><img class="timeline__img" src="slike/pismo_inocent.jpg"/>
-        <h2 class="timeline__content-title">1248.</h2>
-        <p class="timeline__content-desc"><strong>Otpis pape Inocenta IV.</strong> iz 1248. senjskomu biskupu Filipu sadržava papino dopuštenje da spomenuti biskup vrši bogoslužje na crkvenoslavenskome jeziku iz knjiga pisanih glagoljicom. Njegova je važnost u tome da po prvi put jedan katolički biskup dobiva dopuštenje da služi misu na nelatinskome jeziku. Pismo je stoga jasan i izravan dokaz prihvaćanja glagoljice i slavenskoga bogoslužja u hrvatskim krajevima. Na taj je način postavljen temelj za ulazno razdoblje hrvatske glagoljične kulture u 14. i 15. st. Pismo se danas čuva u Tajnome vatikanskom arhivu.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Otpis pape Inocenta IV. krčkome biskupu Fructuozu" id="pismo-krckom-biskupu-fructuozu">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Inocenc_IV.jpg"/>
-        <h2 class="timeline__content-title">1252.</h2>
-        <p class="timeline__content-desc">Odobrava se korištenje staroslavenskoga jezikom i glagoljice u bogoslužju bendeiktincima u Samostanu sv. Nikole u Omišlju.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Vinodolski zakonik" id="vinodolski-zakonik">
-      <div class="timeline__content"><img class="timeline__img" src="slike/vinodolski-zakonik.jpg"/>
-        <h2 class="timeline__content-title">1288.</h2>
-        <p class="timeline__content-desc"><strong><em>Vinodolski zakonik</em></strong>, najstariji cjelovito sačuvan dokument običajnoga prava, vjerojatno stariji od svih sličnih dokumenata na slavenskim jezicima osim <em>Ruske pravde</em>. Pisan glagoljicom na hrvatskome jeziku, u tome se pravnom tekstu od 77 članaka uređuju odnosi između slobodne općine Vinodol (Novi, Ledenice, Bribir, Grižane, Drivenik, Hreljin, Bakar, Trsat, Grobnik) i knezova Krčkih. Zapis je na 14 pergamentnih listova veličine 24,3 × 16,5 cm. Zakonik se čuva u Nacionalnoj i sveučilišnoj knjižnici u Zagrebu.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="I. vrbnički brevijar" id="vrbnicki-brevijar">
-      <div class="timeline__content"><img class="timeline__img" src="slike/brevijar.png"/>
-        <h2 class="timeline__content-title">13./14. st.</h2>
-        <p class="timeline__content-desc"><strong><em>I. vrbnički brevijar</em></strong> je najstariji očuvani hrvatskoglagoljski brevijar sastoji se od 259 pergamentnih listova. Stariji dio, 1–160 i 191–240, pisan je na prijelazu iz 13. u 14. st. Druga dva dijela, 161–190 i 241–259 lista, pisala su najvjerojatnije druga dva pisara oko sto godina kasnije. Brevijar je posebno važan za proučavannje biblijskih tekstova. Kodeks je vjerojatno pisan u Vrbniku, o čemu svjedoče naknadni zapisi s početka 15. st., kao i lokalna obilježja kao što su zamjenica <em>če</em>, refleks poluglasa kao <em>e</em>, čuvanje prefiksa <em>vi</em> itd.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Vatikanski misal Illirico IV" id="illirico-IV">
-      <div class="timeline__content"><img class="timeline__img" src="slike/ilirico4.png"/>
-        <h2 class="timeline__content-title">14. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Vatikanski misal Illirico IV</em></strong> smatra se najstarijim hrvatskoglagoljskim misalom (koji nije datiran), a njegov kanon najstariji sačuvanim tekstom slavenskoga prijevoda kanona uopće. Njegovi tekstovi evanđelja čuvaju značajke izvornoga, ćirilometodskoga prijevoda. Velika se starina očituje osobito u leksikonu. U novije vrijeme postoje i drukčija mišljenja o vremenu postanka toga misala koja njegovo pisanje smještaju u durugu polovicu 14. st. Pisan je najvjerojatnije u Omišlju na otoku Krku.</p>
-      </div>
-    </div>  
-
-    <div class="timeline-item" data-text="Lobkovicov psaltir" id="lobkovicov">
-      <div class="timeline__content"><img class="timeline__img" src="slike/psaltir.png"/>
-        <h2 class="timeline__content-title">1359.</h2>
-        <p class="timeline__content-desc"><strong><em>Lobkovicov psaltir</em></strong> iz 1359. najstarija je izrijekom datirana hrvatska glagoljična knjiga. Danas se čuva u Pragu. Napisao ju je senjski žakan Kirin. Sastoji se od 160 listova. Nazvana je po posljednim vlasnicima iz obitelji Lobkovic i po tome što je njegov najvažniji dio psaltir. U kolofonu na kraju rukopisa očuvala se bilješka o pisaru, žaknu (đakonu) Kirinu i godinu pisanja 1359. vjerojatno u crkvi sv. Kuzme i Damjna u Senju. Rukopis je malo upotrebljivan i dobro očuvan. Psaltir je potpun, ujedno i najstariji hrvatskoglagoljski tekst psaltira.</p>
-      </div>
-    </div> 
-
-    <div class="timeline-item" data-text="Misal kneza Novaka" id="novak">
-      <div class="timeline__content"><img class="timeline__img" src="slike/misal_novak.png"/>
-        <h2 class="timeline__content-title">1368.</h2>
-        <p class="timeline__content-desc"> <strong><em>Misal kneza Novaka</em></strong> (1368.) rukopisna je glagoljska knjiga koju je ispisao knez Novak Disislavić iz ličke Ostrovice, dvorski vitez hrvatsko-ugarskoga kralja Ludovika I. Anžuvinca. Novakov se misal smatra najstarijim datiranim glagoljičnim misalom (<em>Vatikanski misal Illirico IV</em> je stariji, ali nema dataciju) te drugom najljepšom hrvatskoglagoljskom knjigom nakon <em>Misala Hrvoja Vukčića Hrvatinića </em></p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Knjiški kurziv i kancelarijski kurziv" id="knjiski-kancelarijski">
-      <div class="timeline__content"><img class="timeline__img" src="slike/petrisov.jpg"/>
-        <h2 class="timeline__content-title">14. st.</h2>
-        <p class="timeline__content-desc">U drugoj polovici 14. st. razvijaju se poluustav i kurziv koji se dijeli na dva tipa – knjiški kurziv i kancelarijski kurziv. Knjiškim kurzivom do sredine 16. st. obično su pisani kodeksi poučnoga ili književnoga sadržaja, dok su kancelarijskim kurzivom pisani kancelarijski i notarski akti te razni registri. Tipični su primjeri lijepoga i čitljivoga knjiškog kurziva <em>Petrisov zbornik</em> (na slici)  i <em>Žgombićev zbornik</em>, dok je primjer kancelarijskoga kurziva prisutan u tisućama notarskih akata, nastajalih od 15. do 19. st. u javnih bilježnika hrvatskoga jezika i glagoljičnoga pisma u Istri te na otocima Cresu, Lošinju i Krku.</p>
-      </div>
-    </div>
-    <div class="timeline-item" data-text="Pariški (Borislavičev) zbornik Slave 73" id="slave-73">
-    <div class="timeline__content"><img class="timeline__img" src="slike/Slave_73.jpg"/>
-      <h2 class="timeline__content-title">1375.</h2>
-      <p class="timeline__content-desc"> <strong><em>Pariškom zborniku Slave 73</em></strong> je najstariji hrvatskoglagoljski zbornik. U zborniku rukopisu koji se umnogome razlikuje od drugih hrvatskoglagoljskih izvora, jer između ostalog sadrži rijedak primjer glagoljaškog liber horarum i predstavnik je onih liturgijskih tekstova koji su općenito nestali iz uporabe nakon franjevačke reforme. Intenzivnijim istraživanjem ovoga zbornika i utvrđivanjem izvora i predložaka na temelju kojih je kodeks sastavljen, zasigurno će se proširiti spoznaje o tragovima benediktinske glagoljske baštine u hrvatskoj kulturi.
-      </p>
-    </div>
-  </div>
-
-  <div class="timeline-item" data-text="Poljski kralj Vladislav II. Jagelović otvara samostan za glagoljaše u Krakovu" id="sv-kriz">
-    <div class="timeline__content"><img class="timeline__img" src="slike/jagelovic.jpg"/>
-      <h2 class="timeline__content-title">1390.</h2>
-      <p class="timeline__content-desc">Poljski kralj Vladislav II. Jagelović zove glagoljaše iz samostana Emaus kraj Praga u okolicu Krakova gdje im je podigao samostan sv. Križa u kojemu se glagoljica održala sve do potkraj 15. st.
-      </p>
-    </div>
-  </div>
-
-  <div class="timeline-item" data-text="Istarski razvod" id="istarski-razvod">
-    <div class="timeline__content"><img class="timeline__img" src="slike/istarski.png"/>
-      <h2 class="timeline__content-title">1395.</h2>
-      <p class="timeline__content-desc"><strong><em>Istarski razvod</em></strong>, hrvatskoglagoljični pravni spomenik, nastao oko 1395. kojim se uređuju granice te reguliraju posjedi i odnosi između istarskih općina te njihovih feudalnih gospodara Habsburgovaca, akvilejskoga patrijarha i Mlečana. Pisan je glagoljicom na hrvatskome jeziku na temelju priloženih dokumenata od 1275. do 1395. godine. Sačuvan je u više potvrda kao notarski akt iz 16. st. Spomenik svjedoči o visokome pravnom standardu u graničnome području duž cijele Istre potvrđujući ravnopravan položaj hrvatskoga jezika s latinskim i njemačkim u javnome bilježništvu na europskoj razini.<br />Izvornik (original) nije sačuvan. Na hrvatskome jeziku spomenik je sačuvan samo u dva glagoljska prijepisa:
-      <ol class="timeline__content-desc">
-      <li>prijepis Levca Križanića iz 1546. (koji je nastao s prijepisa Jakova Križanića, 1502., na slici)</li>
-      <li>Momjanski prijepis iz 16. st.</li>
-      </ol>
-      <br>
-      <span class="timeline__content-desc">Taj istaknuti dokument istarske i hrvatske društvene povijesti na latinici prvi je objavio otac domovine Ante Starčević 1852. godine.</span>
-        </p>
-    </div>
-  </div>
-    <div class="timeline-item" data-text="Brevijar Vida Omišljanina" id="brevijar-omisljanin">
-      <div class="timeline__content"><img class="timeline__img" src="slike/brevija-omisljanin.png"/>
-        <h2 class="timeline__content-title">1396.</h2>
-        <p class="timeline__content-desc"><strong><em>Brevijar Vida Omišljanina</em></strong> ispisao je pisar Vid iz Omišlja po narudžbi crkava sv. Bartolomeja i sv. Antona u Roču (Istra). Danas se ta rukopisna knjiga nalazi u Austrijskoj nacionalnoj knjižnici u Beču pod signaturom <em>Cod. slav. 3</em>. Izvorno je riječ o u kožu uvezanu kodeks koji sadržava 468 listova pergamene. Prema računici Branka Fučića za izradu je te pergamene bilo potrebno stado od 117 ovaca. Knjiga teži oko 8,5 kilograma te je najveća i najteža knjiga iz zlatnoga razdoblja hrvatskoga glagoljaštva (14. i 15. stoljeće).</p>
-      </div>
-    </div>
-
-
-    <div class="timeline-item" data-text="Hrvojev misal" id="hrvojev-misal">
-      <div class="timeline__content"><img class="timeline__img" src="slike/Hrvojev_misal.jpg"/>
-        <h2 class="timeline__content-title">1403./1404.</h2>
-        <p class="timeline__content-desc"><strong><em>Hrvojev misal</em></strong> nastao početkom 15. st. (oko 1404.) je na glasu kao najljepša i najluksuznije ukrašena hrvatskoglagoljična knjiga. Po ljepoti je odmah do nje Misal kneza Novaka, poznat po tomu što sadržava najviše zlatnih ukrasa i činjenici da je (vjerojatno) glavni predložak za izradu prve hrvatske tiskane knjige – Misala po zakonu rimskoga dvora iz 1483. godine. 
-        </p>
-      </div>
-    </div>
-
-
-
-
-    <div class="timeline-item" data-text="Ročki misal" id="rocki-misal">
-      <div class="timeline__content"><img class="timeline__img" src="slike/rocki.jpg"/>
-        <h2 class="timeline__content-title">15. st.</h2>
-        <p class="timeline__content-desc"><strong><em>Ročki misal</em></strong> je glagoljski misal pisan uglatom glagoljicom. Sadrži 232 lista pergamenta koji sadrže bogato iluminirane slike i inicijale. Autorstvo misala potpisuje Bartol Krbavac koji je značajan glagoljski pisac i vrstan iluminator. Izuzima se 13 listova koji su djelo drugoga pisca, ali iz istoga skriptorija. Ročki misal dobio je ime po Roču gdje je bio u uporabi do 1593. Značajan je filološki, kulturološki, povijesni i umjetnički spomenik hrvatskoga glagoljaštva.
-        </p>
-      </div>
-    </div> 
-  
-
-    <div class="timeline-item" data-text="I. ljubljanski (beramski) misal" id="ljubljanski-misal">
-      <div class="timeline__content"><img class="timeline__img" src="slike/beram.png"/>
-        <h2 class="timeline__content-title">15. st.</h2>
-        <p class="timeline__content-desc"><strong><em>I. ljubljanski (beramski) misal</em></strong> kodeks je od 245 pegamentnih listova. Vrlo lijepo i dobar očuvan rukopis prepisao je također Bartol Krbavac, a on se može zvat i beramski jer je rano bio u uporabi. To se može doznati iz kalendara u kojem je crvenom bojom označen blagdan svetog Martina, biskupa i ispovjednika, a njemu je posvećena crkva u Bermu. Kalendar je u ovom misalu zanimljiv i po tzv. alegorijama mjeseci, tj. po sličicama koje prikazuju posao tipičan za određeni mjesec. 
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Brevijar popa Mavra"  id="brevijar-mavra">
-      <div class="timeline__content"><img class="timeline__img" src="slike/mavro.png"/>
-        <h2 class="timeline__content-title">1460.</h2>
-        <p class="timeline__content-desc"><strong><em>Brevijar popa Mavra</em></strong> je rukopis od 417 listova pisan ustavnom glagoljicom dvostupačno s po 30 redaka i urušen inicijalima crvene i zelene boje s elementima pletera. Brevijar je napisao žakan Blaž Baromić za vrbničkog popa Mavra, a dovršio pop Jure iz Baške. To je bio putni brevijar koji je vrbnički pop Mavar nosio sa sobom u Konavle, o čemu svjedoče zabilješke u rukopisu. Sanktoral ovog brevijara ima dvije vlastite službe koje obilježje nacionalnih oficija: službu u čast solunskoj braći koja njihovo rođenje smješta u Solin i službu u čast sv. Iliji. Kodeks je bio u privatnom vlasništvu obitelji Pezzoli u Rimu sve do 1981. kad je otkupljen. 
-        </p>
-      </div>
-    </div>
-
-
-    <div class="timeline-item" data-text="Petrisov zbornik" id="petrisov-zbornik">
-      <div class="timeline__content"><img class="timeline__img" src="slike/petrisov-zbornik.jpg"/>
-        <h2 class="timeline__content-title">1468.</h2>
-        <p class="timeline__content-desc"><strong><em>Petrisov zbornik</em></strong> je sa svojih 350 listova najopsežniji, a po sadržaju među zanimljivijima hrvatskoglagoljskim srednjovjekovnim rukopisnim zbornicima i najvažniji izvor za istraživanje hrvatske srednjovjekovne književnosti. U njem se nalaze članci iz apokrifne književnosti, dijelovi srednjovjekovnih romana, enciklopedijski tekstovi, traktati, recepti i dr. U njegovu jeziku miješaju se čakavština, kajkavština i staroslavenski jezik. Ne zna se je li pisan u Istri ili na ozaljskome području.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-text="Misal po zakonu rimskoga dvora" id="misal-rimski-dvor"> 
-      <div class="timeline__content"><img class="timeline__img" src="slike/rimski-misal.jpg"/>
-        <h2 class="timeline__content-title">1483.</h2>
-        <p class="timeline__content-desc"> S glagoljaštvom započinje pisana, tj. zabilježena povijest hrvatskoga jezika, povijest hrvatske knjige i uopće povijest hrvatske pisane kulture. O snazi i dosegu te baštine govori činjenica da s glagoljašima započinje povijest hrvatskoga tiska i da je glavnina hrvatskih inkunabula tiskana upravo na glagoljici. Inkunabule su knjige tiskane na samim početcima tiska u Europi, od 1455. do 1500. godine. Samo 28 godina nakon Gutenbergove Biblije i devet godina nakon prvotiska latinskoga misala otisnuta je prva hrvatska tiskana knjiga – glagoljični <strong><em>Misal po zakonu rimskoga dvora</em></strong>, čije je tiskanje dovršeno 22. veljače 1483. godine.<br>Od ukupno devet poznatih hrvatskih inkunabula &scaron;est ih je otisnuto glagoljicom. Uz <em>Misal </em>iz 1483. to su <em>Brevijar po zakonu rimskoga dvora</em> (1491.), <em>Baromićev brevijar</em> (1493.), <em>Senjski misal</em> (1494.) i <em>Spovid općena</em> (1496.). Za <em>Ispovid</em> (1492.) znamo da je otisnuta, ali se do danas nije na&scaron;ao nijedan njezin primjerak.</p>
-      </div>
-    </div>  
-     
-    <div class="timeline-item" data-text="Prvotisak brevijara" id="prvotisak">
-      <div class="timeline__content"><img class="timeline__img" src="slike/prvotisak.jpg"/>
-        <h2 class="timeline__content-title">1491.</h2>
-        <p class="timeline__content-desc"><strong><em>Hrvatskoglagoljski tiskani brevijar</em></strong> iz 1491. godine u prvom dijelu temporala (do početka korizme) slaže se s najstarijom glagoljskom tradicijom, sačuvanom npr. u I. vrbničkom brevijaru. U ostalom dijelu godine slijedi jednu mlađu tradiciju, ali različitu od zadarsko-krbavskih brevijara. U sanktoralu se slaže s onim istarskim brevijarima koji nemaju kult sv. Ćirila i Metodija ni jače istaknutih franjevačkih svetkovina. Za jezik brevijara iz 1491. karakteristična je češća upotreba zamjenice če mjesto čьto. Vjerojatno je dakle i ovaj prvotisak djelo istarskih glagoljaša, iako po svojim tehničkim osobinama zaostaje za prvotiskom misala iz 1483.</p>
-      </div> 
-  </div> 
-
-
-
-    <div class="timeline-item" data-text="Senjska tiskara" id="senjska-tiskara">
-      <div class="timeline__content"><img class="timeline__img" src="slike/senjska-tiskara.png"/>
-        <h2 class="timeline__content-title">1494.</h2>
-        <p class="timeline__content-desc"> U Senju od 1494. do 1508. djelovala je glagoljična tiskara, koju je utemeljio Krčanin i senjski kanonik Blaž Baromić sa suradnicima. Danas je poznato sedam naslova izdanih u toj tiskari: <em>Senjski misal</em> (1494.), <em>Spovid općena</em> (1496.), <em>Naručnik plebanušev</em> (1507.), <em>Mirakuli slavne deve Marije</em> (1507./1508.), <em>Meštrija od dobra umrtija s ritualom </em>(1507./1508.), <em>Transit sv. Jerolima</em> (1508.) i <em>Korizmenjak</em> (1508.).</p>
-      </div> 
-  </div> 
-
-  <div class="timeline-item" data-text="Drugi Novljanski brevijar" id="drugi-novaljski-brevijar">
-
-    <div class="timeline__content"><img class="timeline__img" src="slike/drugi-novaljski.png"/>
-      <h2 class="timeline__content-title">1495.</h2>
-      <p class="timeline__content-desc"> <strong><em>Drugi Novljanski brevijar</em></strong> poznat još kao <em>Zapis popa Martinca</em> sadrži opis o porazu hrvatske plemičke vojske od Osmanlija na Krbavskome polju 1493.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item" data-text="Žgombičev zbornik" id="zgombicev-zbornik">
-    <div class="timeline__content"><img class="timeline__img" src="slike/zgombicev-zbornik.png"/>
-      <h2 class="timeline__content-title">16. st</h2>
-      <p class="timeline__content-desc">Hrvatskoglagoljski Žgombićev zbornik</em></strong> iz 16. stoljeća smatra se jednom od najvažnijih hrvatskih zbirki srednjovjekovnih književnih tekstova Sadrži dvadesetak tekstova, od kojih dio potječe iz grčko-bizantsko-crkvenoslavenskih matica, a dio iz zapadnoeuropskih književnih izvora. Ta dvojnost izvora odakle je crpljena građa tipična je za cjelokupan korpus hrvatske srednjovjekovne književnosti.<br>Kodeks je napisan na papiru i ima 125 listova, a sastoji se od triju dijelova različite starine. Najstariji i najveći dio s više od stotinu listova – od 24 do 125 – napisan je između 1520. i 1530. godine. Drugi dio, na listovima od 11 do 23, nastao je prema Štefaniću najkasnije oko 1540. godine. Treći, najmlađi dio, potječe iz vremena oko 1582. godine. Obuhvaća deset listova koji su uvezani na početku knjige.</p>
-    </div> 
-</div>  
-  <div class="timeline-item" data-text="Prva hrvatskoglagoljska početnica" id="prva-hrvatskoglagoljska-pocetnica">
-    <div class="timeline__content"><img class="timeline__img" src="slike/pocetnica.png"/>
-      <h2 class="timeline__content-title">1527.</h2>
-      <p class="timeline__content-desc"><strong><em>Prva hrvatskoglagoljska početnica</em></strong> otisnuta u Veneciji 1527. je najstarija hrvatska glagoljska početnica. Tiskana je u tiskari Andree Torresanija.</p>
-    </div> 
-</div>   
-<div class="timeline-item" data-text="Misal Pavla Modrušanina" id="misal-modrusanina">
-    <div class="timeline__content"><img class="timeline__img" src="slike/misal_pavla_modrusanina.jpg"/>
-      <h2 class="timeline__content-title">1529.</h2>
-      <p class="timeline__content-desc"><strong><em>Misal Pavla Modrušanina</em></strong> otisnut je u Veneciji 1529. Smatra se jednim od najljepših hrvatskih glagoljičnih misala. Modrušanin je u tiskani kalendar dodao stihove o godišnjim dobima i tako ostvario svoj jedini pjesnički pokušaj. Zanimljivo je da se upravo uz 22. veljače nalazi zapis kojim se najavljuje početak proljeća.</p>
-    </div> 
-</div>  
-
-  <div class="timeline-item" data-text="Misal hruacki" id="misal-hruacki">
-    <div class="timeline__content"><img class="timeline__img" src="slike/hruacki.png"/>
-      <h2 class="timeline__content-title">1531.</h2>
-      <p class="timeline__content-desc">Modruški bisku Šimun Kožičić Benja tiskao <strong><em>Misal hruacki</em></strong> u Rijeci. Smatra se najopsežnijim i najljepšim Kožičevim dijelom. Knjiga je tiskana na 8 nepaginiranih i 248 paginiranih listova te sadrži mnogo glagoljskih inicijala i gotičkih ilustracija od kojih neke sadrže antropomorfne likove.</p>
-    </div> 
-</div>  
-
-
-  <div class="timeline-item" data-text="Brozićev brevijar" id="brozicev-brevijar">
-      <div class="timeline__content"><img class="timeline__img" src="slike/brozic.png"/>
-        <h2 class="timeline__content-title">1561.</h2>
-        <p class="timeline__content-desc">Knjiga je s kojom završava najstarije, najbogatije i najutjecajnije razdoblje hrvatskoga glagoljičnog tiskarstva <strong><em>Brozićev brevijar</em></strong><em>. </em>Tiskana je 1561. u Veneciji, a pripremio ju je Nikola Brozić iz Omišlja na Krku. Riječ je zapravo o novome izdanju <em>Baromićeva brevijara </em>iz 1493. godine, prve hrvatskoglagoljične knjige kojoj je u kolofonu navedeno kad ju je, gdje i tko tiskao. Brozićevo je izdanje dopunjeno pojedinim službama čiji je tekst djelomice pohrvaćen.</p>
-      </div> 
-  </div>  
-  
-  <div class="timeline-item" data-text="Grande munus" id="grande-munus">
-    <div class="timeline__content"><img class="timeline__img" src="slike/papa-leon-xiii.jpg"/>
-      <h2 class="timeline__content-title">1880.</h2>
-      <p class="timeline__content-desc">Enciklika pape Leona XIII. izdaje <strong><em>Veliko poslanje (Grande munus)</em></strong> izdana je povodom 1000. obljetnice djelovanja sv. Ćirila i Metoda. Papa veliča djelovanje svete braće te za njih uvodi blagdan u kalendar cijele katoličke crkve.</p>
-    </div> 
-</div>  
-
-<div class="timeline-item" data-text="Parčićev misal" id="parcicev-misal">
-  <div class="timeline__content"><img class="timeline__img" src="slike/parcic.png"/>
-    <h2 class="timeline__content-title">1893.</h2>
-    <p class="timeline__content-desc">Drgutin Parčić 1893. prirerdio i objavio <strong><em>Misala i Obrednika</em></strong> na crkvenoslavenskom jeziku hrvatske redakcije. Tom objavom je označen kraj rusifikacije hrvatskih crkvenoslavenskih liturgijskih knjiga i povratak izvornom hrvatskom crkvenoslavenskom jeziku.</p>
-  </div> 
-</div> 
-
-  <div class="timeline-item" data-text="Staroslavenska akademija" id="staroslavenska-akademija">
-    <div class="timeline__content"><img class="timeline__img" src="slike/stin-akademija.png"/>
-      <h2 class="timeline__content-title">1902.</h2>
-      <p class="timeline__content-desc">Temelji Staroslavenskoga instituta položeni su osnivanjem <strong>Staroslavenske akademije</strong> 1902. Staroslavenska je akademija 1928. godine ujedinjena s Hrvatskom bogoslovskom akademijom u Zagrebu kao njezin Staroslavenski odsjek.Pročelnikom odsjeka imenovan je mons. dr. Svetozar Ritig (Slavonski Brod, 1873. – Zagreb, 1961.). God. 1939. mons. Ritig dao je ostavku na pročelništvo čekajući bolja vremena. Uspio je obnoviti Staroslavensku akademiju pri Komisiji za vjerske poslove Vlade Narodne Republike Hrvatske (NRH) kojoj je bio predsjednik.<br>Akademija je obnovljena 15. rujna 1948. godine na skupštini Društva svećenika Hrvatske u Rijeci. Odlučeno je da njezino sjedište bude u Zagrebu. Predsjednik Vlade NRH povjerio je mons. Ritigu vođenje Akademije.</p>
-    </div> 
 </div>
+        
+         <div class="timeline-item" data-text="Motiv glagoljice na hrvatskim euro kovanicama" id="euro">
+            <div class="timeline__content">
+               <img class="timeline__img" src="slike/5-centi.png" />
+               <h2 class="timeline__content-title">2023.</h2>
+               <p class="timeline__content-desc">
+                  Republika Hrvatska je 1. siječnja 2023. zamijenila svoju novčanu valutu kunu eurom koji je tog dana postao
+                  nova nacionalna valuta Hrvatske. Hrvatska je uvođenjem eura ušla u eurozonu kao 20. zemlja u kojoj je euro
+                  službena valuta.
+                  <br>Na kovanici od 1, 2 i 5 centi motiv je slova <em>HR</em> napisanih uglatom glagoljicom. Kovanicu je
+                  dizajnirala Maja Škripelj i dizajn sadržava godinu izdavanja i natpis <em>HRVATSKA</em>.
+               </p>
+            </div>
+         </div>
+         <div class="demo-footer">
+            <div class="timeline__content"><a href="https://stin.hr/sadrzaj/digistin/" target="_blank">Lenta je izrađena
+               unutar projekta Digistin.</a>
+            </div>
+         </div>
+      </div>
+   </div>
+      <!-- partial -->
+      <script src='jquery.min.js'></script>
+      <script src="./script.js"></script>
 
-
-  <div class="timeline-item" data-text="Staroslavenski institut" id="staroslavenska-institut">
-      <div class="timeline__content"><img class="timeline__img" src="slike/povijest_stin.jpg"/>
-        <h2 class="timeline__content-title">1952.</h2>
-        <p class="timeline__content-desc"> Kao predsjednik Komisije za vjerske poslove mons. Ritig predložio je predsjedniku Vlade NRH da se naziv Staroslavenska akademija promijeni u naziv <strong>Staroslavenski institut</strong>. Predsjednik Vlade NRH Vladimir Bakarić potpisao je 18. ožujka 1952. uredbu kojom se osniva Staroslavenski institut sa zadatkom da skuplja, obrađuje i proučava staroslavenske i stare hrvatske spomenike i drugo gradivo potrebno za izdavanje stručnih rječnika, monografija, zbornika i sličnih izdanja i da ih objelodanjuje te da uz stručnu knjižnicu  osnuje fototeku, u kojoj će prikupljati snimke svih važnijih glagoljskih spomenika i ostalih spomenika koji se nalaze u knjižnicama i arhivima izvan Zagreba ili u inozemstvu.<br>Staroslavenski institut posvećen je istraživanju, otkrivanju, prepoznavanju, sustavnomu popisivanju i obrađivanju hrvatskih i staroslavenskih glagoljskih rukopisa, natpisa i tiskanih knjiga.</p>
-      </div> 
-  </div>  
-  
-  <div class="timeline-item" data-text="Egregiae Virtutis" id="egregiae-virtutis">
-      <div class="timeline__content"><img class="timeline__img" src="slike/papa-ivan-2.jpg"/>
-        <h2 class="timeline__content-title">1980.</h2>
-        <p class="timeline__content-desc"> 31. prosinca 1980. papa Ivan Pavao II. pismom <strong><em>Egregiae Virtutis</em></strong> proglasio je slavenske apostole, svetu braću Girila i Metoda suzaštitnicima Europe.</p>
-      </div> 
-  </div>
-
-  <div class="timeline-item" data-text="Društvo prijatelja glagoljice" id="drustvo-prijatelja-glagoljice">
-    <div class="timeline__content"><img class="timeline__img" src="slike/dpg_logotip.jpg"/>
-      <h2 class="timeline__content-title">1993.</h2>
-      <p class="timeline__content-desc"><strong>Društvo prijatelje glagoljice<strong> osnovano je 22. veljače 1993., točno na 510. obljetnicu hrvatskoga prvotiska <em>Misal po zakonu rimskoga dvora</em> (1483). Bavim se različitim aktivnostima vezanima za promicanje i održavanje glagoljaške baštine. Sjedište društva je pri Matici hrvatskoj, na Strossmayerovom trgu 4 u Zagrebu. Članom Društva mogu postati pojedinci, udruge, ustanove i druge pravne osobe iz zemlje i svijeta koji u cijelosti prihvaćaju pravila Društva i spremni su surađivati u njegovim djelatnostima. Imaju časopis Bašćina koji izlazi jednom godišnje.</p>
-    </div> 
-</div>
-  <div class="timeline-item" data-text="Dan hrvatske glagoljice i glagoljaštva" id="dan-glagoljice">
-      <div class="timeline__content"><img class="timeline__img" src="slike/dan.png"/>
-        <h2 class="timeline__content-title">2019.</h2>
-        <p class="timeline__content-desc"> Godine 2019. Hrvatski sabor dan 22. veljače proglasio je <strong>Danom hrvatske glagoljice i glagoljaštva</strong>. Proglašenje tog dana inicirao je Institut za hrvatski jezik i jezikoslovlje povodom toga što je 22. veljače spomen na dan kada je 1483. godine tiskana prva hrvatska knjiga <em>Misal po zakonu rimskoga dvora</em>.</p>
-      </div> 
-  </div>
-
-</div>
-<div class="demo-footer"><div class="timeline__content"><a href="https://stin.hr/sadrzaj/digistin/" target="_blank">Lenta je izrađena unutar projekta Digistin.</a></div>
-
-<!-- partial -->
-  <script src='jquery.min.js'></script>
-  <script  src="./script.js"></script>
-
-</body>
+      <script>
+         function toggleSidebar() {
+           document.body.classList.toggle('menu-open');
+         }
+       </script>
+   </body>
 </html>

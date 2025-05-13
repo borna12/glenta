@@ -39,7 +39,7 @@
               ")"
           );
           selectors.item.last().addClass(selectors.activeClass);
-          window.location.hash = '#dan-glagoljice';
+          window.location.hash = '#euro';
           
         } else if (pos <= max - 40 && pos >= min) {
           selectors.id.css(
