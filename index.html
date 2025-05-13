@@ -1140,6 +1140,18 @@
          function toggleSidebar() {
            document.body.classList.toggle('menu-open');
          }
+
+         // Zatvori meni kad se klikne van sidebar-a i gumba
+  document.addEventListener('click', function (event) {
+    const sidebar = document.querySelector('.sidebar');
+    const toggle = document.getElementById('menuButton');
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnToggle = toggle.contains(event.target);
+
+    if (!isClickInsideSidebar && !isClickOnToggle) {
+      document.body.classList.remove('menu-open');
+    }
+  });
        </script>
 
 
