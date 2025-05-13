@@ -67,3 +67,26 @@ if (window.location.href.indexOf('#') == 0) {
   let hashTop = document.querySelector(`#${hash}`).offsetTop;
   window.scrollTop = hashTop;
 }
+
+
+
+function activateTimelineItemFromHash() {
+  const hash = window.location.hash.substring(1);
+  if (!hash) return;
+
+  const target = document.getElementById(hash);
+  if (!target || !target.classList.contains("timeline-item")) return;
+
+  $(".timeline-item").removeClass("timeline-item--active");
+  target.classList.add("timeline-item--active");
+}
+
+// Aktiviraj kod učitavanja stranice
+$(document).ready(function () {
+  activateTimelineItemFromHash();
+});
+
+// Aktiviraj kod promjene hasha (klik, ručno, povijest)
+$(window).on("hashchange", function () {
+  activateTimelineItemFromHash();
+});

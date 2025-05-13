@@ -348,3 +348,8 @@ body.menu-open .sidebar {
   scrollbar-width: thin;
   scrollbar-color: #555 #2c2c2c;
 }
+
+/* Odmak prema dolje kad se scrolla na anchor */
+.timeline-item {
+  scroll-margin-top: 20px; /* ili više ako treba veći razmak */
+}
