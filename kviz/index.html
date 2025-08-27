@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Povijest glagoljaštva kviz</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Testiraj svoje znanje o glagoljici i hrvatskoj kulturnoj baštini kroz zabavan kviz s pitanjima od Ćirila i Metoda do Dana glagoljice.">
+    <meta name="keywords" content="kviz, povijest, glagoljica, glagoljaštvo">
+    <meta name="author" content="STIN">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/9b2be0a113.js" crossorigin="anonymous"></script>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta property="og:title" content="Povijest glagoljaštva kviz" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="og-slika.png" />
+    <meta property="og:url" content="https://ahrefs.com/blog/open-graph-meta-tags/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@stin" />
+    <meta name="twitter:title" content="Povijest glagoljaštva kviz" />
+    <meta name="twitter:description" content="Testiraj svoje znanje o glagoljici i hrvatskoj kulturnoj baštini kroz zabavan kviz s pitanjima od Ćirila i Metoda do Dana glagoljice." />
+    <meta name="twitter:image" content="og-slika.png" />
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <audio class="audios" id="tocno" preload="none">
+            <source src="zvuk/tocno.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="audios" id="krivo" preload="none">
+            <source src="zvuk/krivo.mp3" type="audio/mpeg">
+        </audio>
+        <div class="init-page">
+            <div class="container container2">
+                <div class="modal-overlay">
+                    <div class="modal">
+                        <h2 class="winner" style="text-transform: uppercase; font-size:2rem">Povijest glagoljaštva kviz</h2>
+                        <br>
+                        <hr class="style-two">
+                        <div id="uvod"><p class="opis" style="text-align: justify; font-size:1.5rem; padding: 10px;"></p>
+                        <br>
+                        <button class="btn uglata gla" onclick="document.getElementById('uvod').style.display = 'none';document.getElementById('razina').style.display = 'block'">igraj</button></div>
+                        <div id="razina" style="display: none;"> <p class="opis" style="text-align: left; font-size:1.5rem; padding: 10px;text-align: center;">Odaberi razdoblje kviza:</p>
+                        <button class="init-page__btn btn uglata" onclick="set_pitanja=1">Počeci glagoljice i slavenske pismenosti (9. stoljeće)</button>
+                        <button class="init-page__btn btn uglata" onclick="set_pitanja=2">Rano hrvatsko glagoljaštvo (10. – 13. stoljeće)</button>
+                        <button class="init-page__btn btn uglata" onclick="set_pitanja=3">Zlatno doba glagoljaštva (14. – 16. stoljeće)</button>
+                        <button class="init-page__btn btn uglata" onclick="set_pitanja=4">Sumrak glagoljaštva (17. – 19. stoljeće)</button>
+                        <button class="init-page__btn btn uglata" onclick="set_pitanja=5">                        Glagoljaštvo u moderno doba (20. stoljeće – danas)</button>
+                    </div>
+
+                        <br>
+                        <p style="text-align: center;">Ovaj je kviz izrađen u sklopu projekta <a href="https://stin.hr/sadrzaj/digistin/" target="_blank">DigiSTIN</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="questions-page">
+            <div class="container">
+                <h2 class="questions-page__question"></h2>
+                <p class="definicija"></p>
+                <img class="init-page__icon slikica" />
+                <div class="row begin-countdown">
+                    <div class="col-md-12 text-center vrijeme">
+                    </div>
+                </div>
+                <ul class="questions-page__answer-list" id="linkovi">
+                   
+                </ul>
+            </div>
+        </div>
+        <div class="results-page">
+            <div class="container sakri" style="top: 50%;
+                position: relative;
+                transition: translate (-50%);
+                transform: translateY(-50%);">
+                <h3 class="results-page__info2">Hvala na sudjelovanju u
+                    kvizu!</h3><br>
+                <p class="results-page__info">Postotak točnih odgovora: <span class="results-page__score"></span>
+                </p>
+                <br>
+                <p class="results-page__info">S obzirom na broj točnih odgovora i vrijeme ostvaren je sljedeći broj bodova:</p>
+                <h3 class="results-page__bodovi"></h3>
+                <p class="results-page__info">Želite naučiti još novih riječi? Pratite nas na Facebooku i svaki mjesec naučite novu riječ!<br> <a href="https://www.facebook.com/stin.hr" target="_blank"><i class="fab fa-facebook-square"></i></a></p>
+                <br>
+                <p>
+
+                    <button class="results-page__retake-btn btn" onclick="location.reload();">NOVA IGRA</button>
+
+            </div>
+        </div>
+    </div>
+    <script src='js/lightzoom.js'></script>
+    <script src="js/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
+        crossorigin="anonymous"></script>
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        if (localStorage.getItem("ispunjen4") != null) {
+            $("#bootstrapForm").hide();
+            $(".results-page__retake-btn").show()
+        }
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault()
+            var extraData = {}
+            $('#bootstrapForm').ajaxSubmit({
+                data: extraData,
+                dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+                error: function () {
+                    // Submit of form should be successful but JSONP callback will fail because Google Forms
+                    // does not support it, so this is handled as a failure.
+                    Swal.fire({
+
+                        title: "Kviz su sastavili leksikografi.",
+                        html: "<p style='text-align:center'>Hvala na sudjelovanju!</p>",
+                        showCloseButton: true,
+                        confirmButtonText: ' zatvori',
+                        backdrop: false,
+                        allowOutsideClick: false, allowEscapeKey: false
+                    })
+                    $("#bootstrapForm").hide()
+                    localStorage.setItem("ispunjen4", "ispunjen");
+
+                    $(".results-page__retake-btn").show()
+                    // You can also redirect the user to a custom thank-you page:
+                    // window.location = 'http://www.mydomain.com/thankyoupage.html'
+                }
+
+            })
+        })
+    </script>
+    <style>
+        form {
+            font-size: 2rem;
+        }
+    </style>
+</body>
+
+</html>
