@@ -341,7 +341,7 @@ if (podatci[questionCounter].Slika !== "") {
 }
             Swal.fire({
                 title: "<span style='color:green'>Točno</span>",
-                html: "<span style='font-size:1.5em'>+" + broj + "</span><br><p>"+podatci[questionCounter].Objašnjenje+"</p><br>"+slikaHtml,
+                html: "<span style='font-size:1.5em' class='bodovi'>+" + broj + "</span><br><br><p>"+podatci[questionCounter].Objašnjenje+"</p><br>"+slikaHtml,
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
