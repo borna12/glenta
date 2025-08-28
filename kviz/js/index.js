@@ -86,6 +86,24 @@ function ProgressCountdown(timeleft, bar, text) {
 }
 
 $(document).ready(function () {
+
+
+    function promijeniPozadinu(url) {
+  const body = document.body;
+  // postavi sljedeću sliku na ::after i pokreni fade
+  body.style.setProperty('--bg-next', `url("${url}")`);
+  body.classList.add('bg-fade-in');
+
+  // kad fade završi: zamijeni "current" i očisti stanje
+  const onEnd = (e) => {
+    if (e.propertyName !== 'opacity') return;
+    body.style.setProperty('--bg-current', `url("${url}")`);
+    body.classList.remove('bg-fade-in');
+    body.style.removeProperty('--bg-next');
+    body.removeEventListener('transitionend', onEnd);
+  };
+  body.addEventListener('transitionend', onEnd);
+}
     // DOM SELECTION ------
     // App pages
     // Page 1 - Initial
@@ -152,11 +170,11 @@ $(document).ready(function () {
         // Hide other pages of the app
         questionsPage.hide();
         resultsPage.hide();
-        if (set_pitanja==1){cat="počeci"}
-        else if (set_pitanja==2){cat="rano"}
-        else if (set_pitanja==3){cat="zlatno"}
-        else if (set_pitanja==4){cat="sumrak"}
-        else if (set_pitanja==5){cat="moderno"}
+        if (set_pitanja==1){cat="počeci";     promijeniPozadinu("../slike/ciril-metod.jpeg");}
+        else if (set_pitanja==2){cat="rano"; promijeniPozadinu("../slike/Bascanska_ploca.png");}
+        else if (set_pitanja==3){cat="zlatno"; promijeniPozadinu("../slike/Hrvojev_misal.jpg");}
+        else if (set_pitanja==4){cat="sumrak"; promijeniPozadinu("../slike/Propagande-Fide.png");}
+        else if (set_pitanja==5){cat="moderno"; promijeniPozadinu("../slike/5-centi.png");}
         let output =
         podatci.filter(employee => employee.Razdoblje == cat);
         podatci=output
@@ -277,9 +295,13 @@ function odgovor() {
     if (document.getElementById("pageBeginCountdown").value == "0") {
         $("#krivo")[0].play();
         bodovi -= 10;
+        let slikaHtml = "";
+if (podatci[questionCounter].Slika !== "") {
+    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
+}
         Swal.fire({
             title: "Isteklo je vrijeme.",
-            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><figure><img src='slike/" + podatci[questionCounter].slika + " 'class='slikica2'/> </figure><br><p>"+podatci[questionCounter].Objašnjenje+"</p>",
+            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
             showCloseButton: true,
             confirmButtonText: ' dalje',
             backdrop: false,
@@ -302,7 +324,7 @@ function odgovor() {
             nastavi()
         })
 
-        if (podatci[questionCounter].slika == "") {
+        if (podatci[questionCounter].Slika == "") {
             $("figure").hide()
         }
     } else {
@@ -313,9 +335,13 @@ function odgovor() {
             bodovi += 10;
             $("#tocno")[0].play();
             broj = vrijeme + 10
+            let slikaHtml = "";
+if (podatci[questionCounter].Slika !== "") {
+    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
+}
             Swal.fire({
                 title: "<span style='color:green'>Točno</span>",
-                html: "<span style='font-size:1.5em'>+" + broj + "</span><br><br><figure><img src='slike/" + podatci[questionCounter].slika + "'class='slikica2'/> </figure><br><p>"+podatci[questionCounter].Objašnjenje+"</p>",
+                html: "<span style='font-size:1.5em'>+" + broj + "</span><br><p>"+podatci[questionCounter].Objašnjenje+"</p><br>"+slikaHtml,
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
@@ -337,16 +363,20 @@ function odgovor() {
                 }
                 nastavi()
             })
-            if (podatci[questionCounter].slika == "") {
+            if (podatci[questionCounter].Slika == "") {
                 $("figure").hide()
             }
         } else {
             highlightIncorrectAnswerRed();
             bodovi -= 10;
             $("#krivo")[0].play();
+            let slikaHtml = "";
+            if (podatci[questionCounter].Slika !== "") {
+    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
+}
             Swal.fire({
                 title: " <span style='color:#bb422a' >Netočno</span>",
-                html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><figure><img src='slike/" + podatci[questionCounter].slika + " 'class='slikica2'/> </figure><p>"+podatci[questionCounter].Objašnjenje+"</p>",
+                html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
@@ -368,7 +398,7 @@ function odgovor() {
                 }
                 nastavi()
             })
-            if (podatci[questionCounter].slika == "") {
+            if (podatci[questionCounter].Slika == "") {
                 $("figure").hide()
             }
         }

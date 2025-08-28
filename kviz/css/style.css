@@ -18,7 +18,7 @@
     font-style: normal;
     font-display: swap;
 }
-
+.swal2-html-container{font-size: 1.4em;}
 .gla{font-family: 'FSGLA'!important;text-shadow: 1px 1px 2px #c22626;}
 /* ----------------------------
 STYLES/LAYOUT
@@ -102,7 +102,7 @@ body {
     justify-content: center;
     min-height: 480px;
     transition: background-color 1000ms linear;
-    background-image: url(pozadina.jpg);
+    background-image: url(pozadina.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -426,7 +426,7 @@ hr.style-two {
   font-weight: 600;   /* i dalje naglašeno, ali ne prenapuhano */
   text-align: center; /* centriraj da bolje izgleda */
   margin: 0.5em 0;
-}.uglata{width:80%;font-family: "EBGaramond";}
+}.uglata{width:90%;font-family: "EBGaramond";}
 /* ----------------------------
 MEDIA QUERIES
 ---------------------------- */
@@ -487,7 +487,7 @@ footer {
     margin-top: 20px;
     max-width: 100%;
     /*max-height: 400px;*/
-    display: none;
+    display: block;
     margin: auto;
 }
 
@@ -505,3 +505,29 @@ footer {
   font-size: clamp(0.9rem, 0.8vw + 0.7rem, 1.2rem); /* smanjen font */
   line-height: 1.2;
 }
+
+/* --------- Cross-fade pozadine: jednostavan sloj preko body-ja --------- */
+body {
+  /* trenutna slika ide kroz varijablu */
+  --bg-current: url(pozadina.png); /* početna (tvoja postojeća) */
+  background-image: var(--bg-current);
+}
+
+/* novi sloj za tranziciju (preko body backgrounda, ispod sadržaja) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;                 /* ispod tvog body::before gradijenta (-1) */
+  background-image: var(--bg-next, none);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  pointer-events: none;
+}
+
+/* kad dodamo ovu klasu, nova slika fade-in */
+body.bg-fade-in::after { opacity: 1; }
