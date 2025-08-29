@@ -301,7 +301,7 @@ if (podatci[questionCounter].Slika !== "") {
 }
         Swal.fire({
             title: "Isteklo je vrijeme.",
-            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
+            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
             showCloseButton: true,
             confirmButtonText: ' dalje',
             backdrop: false,
