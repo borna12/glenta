@@ -509,7 +509,7 @@ footer {
 /* --------- Cross-fade pozadine: jednostavan sloj preko body-ja --------- */
 body {
   /* trenutna slika ide kroz varijablu */
-  --bg-current: url(pozadina.png); /* početna (tvoja postojeća) */
+  --bg-current: url(pozadina.jpg); /* početna (tvoja postojeća) */
   background-image: var(--bg-current);
 }
 
