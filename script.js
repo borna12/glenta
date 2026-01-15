@@ -6,7 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
   preloader.style.display = "flex";
 
   const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRE22xpo4wPw3Y4KbdidMkPb-u9x2qoC14SXcpNXHUz9U5dcZ4K48aC6nx_xmrtWXEqDjSxM6sBpQh1/pub?gid=122524153&single=true&output=csv";
+const sidebar = document.getElementById("sidebar");
 
+// ⬇️ fiksni Impressum container (dodaje se JEDNOM)
+const impressum = document.createElement("div");
+impressum.className = "sidebar-impressum";
+impressum.innerHTML = `<a href="#" id='impresum'>Impresum</a>`;
+sidebar.appendChild(impressum);
   Papa.parse(csvUrl, {
     download: true,
     header: true,
@@ -78,8 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebarList.appendChild(periodItem);
       }
 
-      sidebar.innerHTML = "";
-      sidebar.appendChild(sidebarList);
+      // ukloni samo postojeću UL listu (ako postoji)
+const oldList = sidebar.querySelector("ul");
+if (oldList) oldList.remove();
+
+// dodaj novu listu ISPOD impressuma
+sidebar.appendChild(sidebarList);
 
       // ➕ Dodaj footer na dno lente
       const footer = document.createElement("div");
@@ -204,4 +214,60 @@ function activateTimelineItemFromHash() {
 // 📎 Aktivacija na hash promjene
 $(window).on("hashchange", function () {
   activateTimelineItemFromHash();
+});
+
+
+$(document).on("click", "#impresum", function (e) {
+  e.preventDefault();
+
+
+  Swal.fire({
+    title: "Impresum",
+    html:`
+    <div><strong>O lenti: </strong></div>
+    <p>Vremenska lenta povijesti glagoljaštva ima za cilj ukratko prikazati važne povijesne događaje povezane s uporabom glagoljaštva u Hrvatskoj.</p>
+    <div><strong>Glavna literatura korištena pri izradi:</strong></div>
+<div>
+<ul id="literatura" class="literatura">
+<li><span class="citati tooltip tooltipstered">Mihaljević, Ana; Mihaljević, Milan; Šimić, Ana. 2024. <em>Glagoljica za znatiželjne</em>. Staroslavenski institut. Zagreb.</span></li>
+<li><span class="citati tooltip tooltipstered"><em>Povijest hrvatskoga jezika 1-6</em>. 2024. Ur. Bičanić Ante. CROATICA. Zagreb.</span></li>
+<li><span class="citati tooltip tooltipstered">Gadžijeva, Sofija; Kovačević, Ana; Mihaljević, Milan; Požar, Sandra; Reinhart, Johannes; Šimić, Marinka; Vince, Jasna. 2014. <em>Hrvatski crkvenoslavenski jezik</em>. Ur. Mihaljević, Milan. Hrvatska sveučilišna naklada – Staroslavenski institut. Zagreb.</span></li>
+<li><span class="citati tooltip tooltipstered"><em>Mrežna stranica Staroslavenskoga instituta</em>. 2014. Staroslavenski institut. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
+<li>Portal Hrvatska glagoljica. 2018. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
+</ul>
+</div>
+<div> </div>
+<div><strong>Tvorac lente: </strong></div>
+<ul>
+<li>Josip Mihaljević</li>
+</ul>
+<p><strong>Suradnici:</strong></p>
+<div>
+<ul>
+<li data-start="73" data-end="89">
+<p data-start="76" data-end="89">Ivan Botica</p>
+</li>
+<li data-start="90" data-end="110">
+<p data-start="93" data-end="110">Marko Brkljačić</p>
+</li>
+<li data-start="111" data-end="134">
+<p data-start="114" data-end="134">Janja Dora Ivančić</p>
+</li>
+<li data-start="135" data-end="154">
+<p data-start="138" data-end="154">Ana Mihaljević</p>
+</li>
+<li data-start="155" data-end="176">
+<p data-start="158" data-end="176">Milan Mihaljević</p>
+</li>
+<li data-start="177" data-end="191">
+<p data-start="180" data-end="191">Ana Šimić</p>
+</li>
+</ul>
+</div>
+    `
+    
+    ,
+    confirmButtonText: "zatvori",
+     theme: 'dark'
+  });
 });

@@ -7,7 +7,9 @@
   max-width: 700px;
   position: relative;
 }
-.sidebar ul li:last-child{padding-bottom: 50px;}
+.sidebar > ul > li:last-child ul li:last-child {
+  padding-bottom: 50px;
+}
 #preloader {
   position: fixed;
   top: 0;
@@ -390,3 +392,28 @@ body.menu-open #menuButton {
 
 figure{margin:0px;}
 figcaption{text-align: right; font-size: 10px; color:white;    margin-left: 120px;}
+/* Impressum fiksiran na dnu sidebara */
+.sidebar-impressum {
+position: fixed;
+    bottom: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 9999;
+    width: 260px;
+}
+
+/* Sidebar mora biti referenca */
+.sidebar {
+  position: fixed;
+}
+.sidebar { height: 100vh; }
+
+/* Lista se skrola iznad Impressuma */
+.sidebar ul {
+  padding-bottom: 20px; /* da zadnji item ne ode ispod impressuma */
+}
+.swal2-html-container{text-align: left;}
