@@ -254,10 +254,10 @@ $(document).on("click", "#impresum", function (e) {
 <p data-start="114" data-end="134">Janja Dora Ivančić</p>
 </li>
 <li data-start="135" data-end="154">
-<p data-start="138" data-end="154">Ana Mihaljević</p>
+<p data-start="138" data-end="154">Josip Galić</p>
 </li>
 <li data-start="135" data-end="154">
-<p data-start="138" data-end="154">Josip Galić</p>
+<p data-start="138" data-end="154">Ana Mihaljević</p>
 </li>
 <li data-start="155" data-end="176">
 <p data-start="158" data-end="176">Milan Mihaljević</p>
