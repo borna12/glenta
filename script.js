@@ -226,7 +226,7 @@ $(document).on("click", "#impresum", function (e) {
     html:`
     <div><strong>O lenti: </strong></div>
     <p>Vremenska lenta povijesti glagoljaštva ima za cilj ukratko prikazati važne povijesne događaje povezane s uporabom glagoljaštva u Hrvatskoj.</p>
-    <div><strong>Glavna literatura korištena pri izradi:</strong></div>
+    <div><strong>Izvori korišteni pri izradi:</strong></div>
 <div>
 <ul id="literatura" class="literatura">
 <li><span class="citati tooltip tooltipstered">Mihaljević, Ana; Mihaljević, Milan; Šimić, Ana. 2024. <em>Glagoljica za znatiželjne</em>. Staroslavenski institut. Zagreb.</span></li>
@@ -234,7 +234,7 @@ $(document).on("click", "#impresum", function (e) {
 <li><span class="citati tooltip tooltipstered">Gadžijeva, Sofija; Kovačević, Ana; Mihaljević, Milan; Požar, Sandra; Reinhart, Johannes; Šimić, Marinka; Vince, Jasna. 2014. <em>Hrvatski crkvenoslavenski jezik</em>. Ur. Mihaljević, Milan. Hrvatska sveučilišna naklada – Staroslavenski institut. Zagreb.</span></li>
 <li><span class="citati tooltip tooltipstered"><em>Mrežna stranica Staroslavenskoga instituta</em>. Staroslavenski institut. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
 <li><span class="citati tooltip tooltipstered"><em>Hrvatska enciklopedija</em>. Leksikografski zavod Miroslav Krleža. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
-<li>Portal Hrvatska glagoljica. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
+<li><em>Portal Hrvatska glagoljica</em>. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
 </ul>
 </div>
 <div> </div>
