@@ -230,10 +230,11 @@ $(document).on("click", "#impresum", function (e) {
 <div>
 <ul id="literatura" class="literatura">
 <li><span class="citati tooltip tooltipstered">Mihaljević, Ana; Mihaljević, Milan; Šimić, Ana. 2024. <em>Glagoljica za znatiželjne</em>. Staroslavenski institut. Zagreb.</span></li>
-<li><span class="citati tooltip tooltipstered"><em>Povijest hrvatskoga jezika 1-6</em>. 2024. Ur. Bičanić Ante. CROATICA. Zagreb.</span></li>
+<li><span class="citati tooltip tooltipstered"><em>Povijest hrvatskoga jezika 1-6</em>. 2009. Ur. Bičanić Ante. CROATICA. Zagreb.</span></li>
 <li><span class="citati tooltip tooltipstered">Gadžijeva, Sofija; Kovačević, Ana; Mihaljević, Milan; Požar, Sandra; Reinhart, Johannes; Šimić, Marinka; Vince, Jasna. 2014. <em>Hrvatski crkvenoslavenski jezik</em>. Ur. Mihaljević, Milan. Hrvatska sveučilišna naklada – Staroslavenski institut. Zagreb.</span></li>
-<li><span class="citati tooltip tooltipstered"><em>Mrežna stranica Staroslavenskoga instituta</em>. 2014. Staroslavenski institut. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
-<li>Portal Hrvatska glagoljica. 2018. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
+<li><span class="citati tooltip tooltipstered"><em>Mrežna stranica Staroslavenskoga instituta</em>. Staroslavenski institut. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
+<li><span class="citati tooltip tooltipstered"><em>Hrvatska enciklopedija</em>. Leksikografski zavod Miroslav Krleža. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
+<li>Portal Hrvatska glagoljica. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
 </ul>
 </div>
 <div> </div>
