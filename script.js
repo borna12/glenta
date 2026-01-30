@@ -233,7 +233,7 @@ $(document).on("click", "#impresum", function (e) {
 <li><span class="citati tooltip tooltipstered"><em>Povijest hrvatskoga jezika 1-6</em>. 2009. Ur. Bičanić Ante. CROATICA. Zagreb.</span></li>
 <li><span class="citati tooltip tooltipstered">Gadžijeva, Sofija; Kovačević, Ana; Mihaljević, Milan; Požar, Sandra; Reinhart, Johannes; Šimić, Marinka; Vince, Jasna. 2014. <em>Hrvatski crkvenoslavenski jezik</em>. Ur. Mihaljević, Milan. Hrvatska sveučilišna naklada – Staroslavenski institut. Zagreb.</span></li>
 <li><span class="citati tooltip tooltipstered"><em>Mrežna stranica Staroslavenskoga instituta</em>. Staroslavenski institut. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
-<li><span class="citati tooltip tooltipstered"><em>Hrvatska enciklopedija</em>. Leksikografski zavod Miroslav Krleža. <a href="https://stin.hr/" target="_blank">stin.hr</a> </span></li>
+<li><span class="citati tooltip tooltipstered"><em>Hrvatska enciklopedija</em>. Leksikografski zavod Miroslav Krleža. <a href="https://enciklopedija.hr/" target="_blank">enciklopedija.hr</a> </span></li>
 <li><em>Portal Hrvatska glagoljica</em>. Nacionalna i sveučilišna knjižnica u Zagrebu. <a href="https://glagoljica.hr/" target="_blank">glagoljica.hr</a>/</li>
 </ul>
 </div>
