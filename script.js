@@ -11,8 +11,12 @@ const sidebar = document.getElementById("sidebar");
 // ⬇️ fiksni Impressum container (dodaje se JEDNOM)
 const impressum = document.createElement("div");
 impressum.className = "sidebar-impressum";
-impressum.innerHTML = `<a href="#" id='impresum'>Impresum</a>`;
+impressum.innerHTML = `
+  <a href="#" id="kviz">Kviz znanja – provjeri svoje znanje</a><br><br>
+  <a href="#" id="impresum">Impresum</a>
+`;
 sidebar.appendChild(impressum);
+
   Papa.parse(csvUrl, {
     download: true,
     header: true,
@@ -242,12 +246,16 @@ $(document).on("click", "#impresum", function (e) {
 <ul>
 <li>Josip Mihaljević</li>
 </ul>
-<p><strong>Suradnici:</strong></p>
+<p><strong>Glavni urednici:</strong></p>
+
+<ul>
+<li>Ivan Botica</li>
+<li>Ana Mihaljević</li>
+<li>Josip Mihaljević</li>
+</ul>
+<p><strong>Zahvale:</strong></p>
 <div>
 <ul>
-<li data-start="73" data-end="89">
-<p data-start="76" data-end="89">Ivan Botica</p>
-</li>
 <li data-start="90" data-end="110">
 <p data-start="93" data-end="110">Marko Brkljačić</p>
 </li>
@@ -256,9 +264,6 @@ $(document).on("click", "#impresum", function (e) {
 </li>
 <li data-start="135" data-end="154">
 <p data-start="138" data-end="154">Josip Galić</p>
-</li>
-<li data-start="135" data-end="154">
-<p data-start="138" data-end="154">Ana Mihaljević</p>
 </li>
 <li data-start="155" data-end="176">
 <p data-start="158" data-end="176">Milan Mihaljević</p>
