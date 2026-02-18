@@ -12,7 +12,7 @@ const sidebar = document.getElementById("sidebar");
 const impressum = document.createElement("div");
 impressum.className = "sidebar-impressum";
 impressum.innerHTML = `
-  <a href="#" id="kviz">Kviz znanja – provjeri svoje znanje</a><br><br>
+  <a href="#" id="kviz">Kviz znanja</a><br><br>
   <a href="#" id="impresum">Impresum</a>
 `;
 sidebar.appendChild(impressum);

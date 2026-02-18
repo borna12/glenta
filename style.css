@@ -403,7 +403,8 @@ position: fixed;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 9999;
     width: 260px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* Sidebar mora biti referenca */
