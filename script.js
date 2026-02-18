@@ -253,7 +253,7 @@ $(document).on("click", "#impresum", function (e) {
 <li>Ana Mihaljević</li>
 <li>Josip Mihaljević</li>
 </ul>
-<p><strong>Zahvale:</strong></p>
+<p><strong>Suradnici:</strong></p>
 <div>
 <ul>
 <li data-start="90" data-end="110">
