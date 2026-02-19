@@ -1,6 +1,7 @@
 let baza = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRYrbQpk8C8qpzd042cUetASGAvA5MiMNx5V8KumqTOyEpLeXHLmJ6Hyv-Xb5VrqkZEzm-74Ixoy4k2/pub?output=csv";
 
 var podatci;
+var podatciSvi;
 const csvData = Papa.parse(baza, {
     dynamicTyping: false,
     download: true,
@@ -8,7 +9,8 @@ const csvData = Papa.parse(baza, {
     transformHeader: function (h) { return h.replace(/\s/g, ''); },
     comments: "*=",
     complete: function (data) {
-        podatci = data.data
+        podatci = data.data;
+        podatciSvi = data.data.slice();
         document.getElementById("loader").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     }
@@ -89,21 +91,21 @@ $(document).ready(function () {
 
 
     function promijeniPozadinu(url) {
-  const body = document.body;
-  // postavi sljedeću sliku na ::after i pokreni fade
-  body.style.setProperty('--bg-next', `url("${url}")`);
-  body.classList.add('bg-fade-in');
+        const body = document.body;
+        // postavi sljedeću sliku na ::after i pokreni fade
+        body.style.setProperty('--bg-next', `url("${url}")`);
+        body.classList.add('bg-fade-in');
 
-  // kad fade završi: zamijeni "current" i očisti stanje
-  const onEnd = (e) => {
-    if (e.propertyName !== 'opacity') return;
-    body.style.setProperty('--bg-current', `url("${url}")`);
-    body.classList.remove('bg-fade-in');
-    body.style.removeProperty('--bg-next');
-    body.removeEventListener('transitionend', onEnd);
-  };
-  body.addEventListener('transitionend', onEnd);
-}
+        // kad fade završi: zamijeni "current" i očisti stanje
+        const onEnd = (e) => {
+            if (e.propertyName !== 'opacity') return;
+            body.style.setProperty('--bg-current', `url("${url}")`);
+            body.classList.remove('bg-fade-in');
+            body.style.removeProperty('--bg-next');
+            body.removeEventListener('transitionend', onEnd);
+        };
+        body.addEventListener('transitionend', onEnd);
+    }
     // DOM SELECTION ------
     // App pages
     // Page 1 - Initial
@@ -170,15 +172,26 @@ $(document).ready(function () {
         // Hide other pages of the app
         questionsPage.hide();
         resultsPage.hide();
-        if (set_pitanja==1){cat="počeci";     promijeniPozadinu("../slike/ciril-metod.jpeg");}
-        else if (set_pitanja==2){cat="rano"; promijeniPozadinu("../slike/Bascanska_ploca.png");}
-        else if (set_pitanja==3){cat="zlatno"; promijeniPozadinu("../slike/Hrvojev_misal.jpg");}
-        else if (set_pitanja==4){cat="sumrak"; promijeniPozadinu("../slike/Propagande-Fide.png");}
-        else if (set_pitanja==5){cat="moderno"; promijeniPozadinu("../slike/5-centi.png");}
-        let output =
-        podatci.filter(employee => employee.Razdoblje == cat);
-        podatci=output
-        shuffle(podatci)
+        // uvijek kreni od master baze
+        podatci = podatciSvi.slice();
+
+        if (set_pitanja == 1) { cat = "počeci"; promijeniPozadinu("../slike/ciril-metod.jpeg"); }
+        else if (set_pitanja == 2) { cat = "rano"; promijeniPozadinu("../slike/Bascanska_ploca.png"); }
+        else if (set_pitanja == 3) { cat = "zlatno"; promijeniPozadinu("../slike/Hrvojev_misal.jpg"); }
+        else if (set_pitanja == 4) { cat = "sumrak"; promijeniPozadinu("../slike/Propagande-Fide.png"); }
+        else if (set_pitanja == 5) { cat = "moderno"; promijeniPozadinu("../slike/5-centi.png"); }
+        else {
+            // set_pitanja == 0 -> sva pitanja
+            cat = null;
+            // opcionalno: pozadina za “sve”
+            // promijeniPozadinu("../slike/neka-slika.jpg");
+        }
+
+        if (cat) {
+            podatci = podatci.filter(p => p.Razdoblje == cat);
+        }
+
+        shuffle(podatci);
     };
     // Load the next question and set of answers
     generateQuestionAndAnswers = function () {
@@ -207,7 +220,7 @@ $(document).ready(function () {
     };
     // Store the correct answer of a given question
     getCorrectAnswer = function () {
-        correctAnswer = podatci[questionCounter].točanodgovor.replace("<br>", "");
+        correctAnswer = podatci[questionCounter].točanodgovor.replace("<br>", "").replace("<em>", "").replace("</em>", "");
     };
     // Store the user's selected (clicked) answer
     getUserAnswer = function (target) {
@@ -296,12 +309,12 @@ function odgovor() {
         $("#krivo")[0].play();
         bodovi -= 10;
         let slikaHtml = "";
-if (podatci[questionCounter].Slika !== "") {
-    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
-}
+        if (podatci[questionCounter].Slika !== "") {
+            slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>" + podatci[questionCounter].Opisslike + "</figcaption></figure>";
+        }
         Swal.fire({
             title: "Isteklo je vrijeme.",
-            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
+            html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>" + podatci[questionCounter].Objašnjenje + "</p>" + slikaHtml,
             showCloseButton: true,
             confirmButtonText: ' dalje',
             backdrop: false,
@@ -336,12 +349,12 @@ if (podatci[questionCounter].Slika !== "") {
             $("#tocno")[0].play();
             broj = vrijeme + 10
             let slikaHtml = "";
-if (podatci[questionCounter].Slika !== "") {
-    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
-}
+            if (podatci[questionCounter].Slika !== "") {
+                slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>" + podatci[questionCounter].Opisslike + "</figcaption></figure>";
+            }
             Swal.fire({
                 title: "<span style='color:green'>Točno</span>",
-                html: "<span style='font-size:1.5em' class='bodovi'>+" + broj + "</span><br><br><p>"+podatci[questionCounter].Objašnjenje+"</p><br>"+slikaHtml,
+                html: "<span style='font-size:1.5em' class='bodovi'>+" + broj + "</span><br><br><p>" + podatci[questionCounter].Objašnjenje + "</p><br>" + slikaHtml,
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
@@ -372,11 +385,11 @@ if (podatci[questionCounter].Slika !== "") {
             $("#krivo")[0].play();
             let slikaHtml = "";
             if (podatci[questionCounter].Slika !== "") {
-    slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>"+podatci[questionCounter].Opisslike+"</figcaption></figure>";
-}
+                slikaHtml = "<figure><img src='slike/" + podatci[questionCounter].Slika + "' class='slikica2'/> <figcaption>" + podatci[questionCounter].Opisslike + "</figcaption></figure>";
+            }
             Swal.fire({
                 title: " <span style='color:#bb422a' >Netočno</span>",
-                html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>"+podatci[questionCounter].Objašnjenje+"</p>"+slikaHtml,
+                html: "<p style='text-align:center; font-size: 1.5em;'><strong>Točan je odgovor: <span style='color:#bb422a; ' >" + podatci[questionCounter].točanodgovor + "</span></strong></p><br><p>" + podatci[questionCounter].Objašnjenje + "</p>" + slikaHtml,
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,

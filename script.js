@@ -229,7 +229,7 @@ $(document).on("click", "#impresum", function (e) {
     title: "Impresum",
     html:`
     <div><strong>O lenti: </strong></div>
-    <p>Vremenska lenta povijesti glagoljaštva ima za cilj ukratko prikazati važne povijesne događaje povezane s uporabom glagoljaštva u Hrvatskoj.</p>
+    <p>Cilj je vremenske lente povijesti glagoljaštva ukratko prikazati važne povijesne događaje povezane s uporabom glagoljaštva u Hrvatskoj.</p>
     <div><strong>Izvori korišteni pri izradi:</strong></div>
 <div>
 <ul id="literatura" class="literatura">
@@ -261,7 +261,7 @@ $(document).on("click", "#impresum", function (e) {
 <li>Janja Dora Ivančić</li>
 <li>Josip Galić
 </li>
-<li><p>Milan Mihaljević</p>
+<li>Milan Mihaljević
 </li>
 <li>Ana Šimić
 </li>
