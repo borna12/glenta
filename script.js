@@ -12,7 +12,7 @@ const sidebar = document.getElementById("sidebar");
 const impressum = document.createElement("div");
 impressum.className = "sidebar-impressum";
 impressum.innerHTML = `
-  <a href="#" id="kviz">Kviz znanja</a><br><br>
+  <a href="/kviz" id="kviz">Kviz znanja</a><br><br>
   <a href="#" id="impresum">Impresum</a>
 `;
 sidebar.appendChild(impressum);
@@ -256,20 +256,14 @@ $(document).on("click", "#impresum", function (e) {
 <p><strong>Suradnici:</strong></p>
 <div>
 <ul>
-<li data-start="90" data-end="110">
-<p data-start="93" data-end="110">Marko Brkljačić</p>
+<li>Marko Brkljačić
 </li>
-<li data-start="111" data-end="134">
-<p data-start="114" data-end="134">Janja Dora Ivančić</p>
+<li>Janja Dora Ivančić</li>
+<li>Josip Galić
 </li>
-<li data-start="135" data-end="154">
-<p data-start="138" data-end="154">Josip Galić</p>
+<li><p>Milan Mihaljević</p>
 </li>
-<li data-start="155" data-end="176">
-<p data-start="158" data-end="176">Milan Mihaljević</p>
-</li>
-<li data-start="177" data-end="191">
-<p data-start="180" data-end="191">Ana Šimić</p>
+<li>Ana Šimić
 </li>
 </ul>
 </div>
