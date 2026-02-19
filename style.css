@@ -420,3 +420,16 @@ position: fixed;
 .swal2-html-container{text-align: left;}
 
 .sidebar-impressum a{margin-left: 20px; text-align: center;}
+
+/* --- FIX: godina (data-text) iznad slike za #tridentski-koncil --- */
+
+
+#tridentski-koncil.timeline-item--active .timeline__content-title,
+#tridentski-koncil .timeline__content-title,
+
+#opadanje-glagoljice.timeline-item--active .timeline__content-title,#opadanje-glagoljice .timeline__content-title,
+#II-vatikanski-koncil.timeline-item--active .timeline__content-title,#II-vatikanski-koncil .timeline__content-title
+{
+  margin-top: 10px; /* ili 0px, po želji */
+}
+
