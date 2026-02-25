@@ -267,6 +267,9 @@ $(document).on("click", "#impresum", function (e) {
 </li>
 </ul>
 </div>
+<a href="https://stin.hr/sadrzaj/digistin/" target="_blank">
+            Lenta je izrađena u sklopu projekta DigiSTIN.
+          </a>
     `
     
     ,
